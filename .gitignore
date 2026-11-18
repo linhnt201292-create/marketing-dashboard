@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pptx
+*.xlsx
+*.pdf
+*.docx
+*.csv
+*.log
+*.txt
+temp_*.js
+.DS_Store
+.agents/
+skills-lock.json
+Screenshot*.png

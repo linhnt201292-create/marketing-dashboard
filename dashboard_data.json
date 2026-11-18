@@ -1,0 +1,630 @@
+{
+  "generated_at": "18/11/2026 13:28:20",
+  "date_range": "01/11/2026 - 18/11/2026",
+  "kpi_year": {
+    "revenue_target": 39000000000,
+    "ads_budget_5pct": 1950000000,
+    "quote_target": 117000000000,
+    "brands": {
+      "THE CITY": {
+        "share": 0.61,
+        "rev": 23790000000,
+        "budget": 1189500000
+      },
+      "THE MIA": {
+        "share": 0.25,
+        "rev": 9750000000,
+        "budget": 487500000
+      },
+      "RPB EDU & PUBLIC": {
+        "share": 0.14,
+        "rev": 5460000000,
+        "budget": 273000000
+      }
+    }
+  },
+  "fb_ads": {
+    "total_spend": 30033394.0,
+    "total_msgs": 592,
+    "total_leads": 52,
+    "total_conv": 644,
+    "avg_cpa": 46635.7049689441,
+    "campaigns": [
+      {
+        "name": "The Mia 2026-Lead-BV-Giải pháp tổng thể-Toàn quốc - 9.9.26",
+        "brand": "THE MIA",
+        "spend": 4011420.0,
+        "impressions": 27036,
+        "clicks": 614,
+        "ctr": 2.271046,
+        "msgs": 33,
+        "leads": 5,
+        "total_conv": 38,
+        "cost_per_conv": 105563.68421052632
+      },
+      {
+        "name": "The Mia - Ghế lãnh đạo - 2.11",
+        "brand": "THE MIA",
+        "spend": 789866.0,
+        "impressions": 4458,
+        "clicks": 172,
+        "ctr": 3.858232,
+        "msgs": 16,
+        "leads": 0,
+        "total_conv": 16,
+        "cost_per_conv": 49366.625
+      },
+      {
+        "name": "RPB EDU - Ghế nâng hạ Moto - Lead -14/08/26",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 906352.0,
+        "impressions": 8032,
+        "clicks": 193,
+        "ctr": 2.402888,
+        "msgs": 21,
+        "leads": 1,
+        "total_conv": 22,
+        "cost_per_conv": 41197.818181818184
+      },
+      {
+        "name": "RPB EDU - Bàn nâng hạ Smart Zico - Lead - 21/08/26",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 914727.0,
+        "impressions": 7336,
+        "clicks": 372,
+        "ctr": 5.070883,
+        "msgs": 39,
+        "leads": 4,
+        "total_conv": 43,
+        "cost_per_conv": 21272.720930232557
+      },
+      {
+        "name": "TheCity - Sigis - Lead - 27.08.26",
+        "brand": "THE CITY",
+        "spend": 415360.0,
+        "impressions": 2960,
+        "clicks": 99,
+        "ctr": 3.344595,
+        "msgs": 13,
+        "leads": 0,
+        "total_conv": 13,
+        "cost_per_conv": 31950.76923076923
+      },
+      {
+        "name": "TheCity - Airblade - Lead - 27.08.26",
+        "brand": "THE CITY",
+        "spend": 429884.0,
+        "impressions": 4510,
+        "clicks": 114,
+        "ctr": 2.527716,
+        "msgs": 11,
+        "leads": 1,
+        "total_conv": 12,
+        "cost_per_conv": 35823.666666666664
+      },
+      {
+        "name": "TheCity - PhoneBooth - Lead - 27.08.26",
+        "brand": "THE CITY",
+        "spend": 892777.0,
+        "impressions": 9576,
+        "clicks": 188,
+        "ctr": 1.963241,
+        "msgs": 8,
+        "leads": 2,
+        "total_conv": 10,
+        "cost_per_conv": 89277.7
+      },
+      {
+        "name": "The Mia - Cung Cấp Giải Pháp - Lead - 07.09.26",
+        "brand": "THE MIA",
+        "spend": 2234824.0,
+        "impressions": 8793,
+        "clicks": 408,
+        "ctr": 4.640055,
+        "msgs": 26,
+        "leads": 4,
+        "total_conv": 30,
+        "cost_per_conv": 74494.13333333333
+      },
+      {
+        "name": "RPB EDU- Phonebooth - Lead - Video - 9.9.26",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 2690490.0,
+        "impressions": 22295,
+        "clicks": 533,
+        "ctr": 2.390671,
+        "msgs": 62,
+        "leads": 5,
+        "total_conv": 67,
+        "cost_per_conv": 40156.567164179105
+      },
+      {
+        "name": "TheCity - WESLEY - Lead - 11.9.26",
+        "brand": "THE CITY",
+        "spend": 423180.0,
+        "impressions": 2532,
+        "clicks": 153,
+        "ctr": 6.042654,
+        "msgs": 16,
+        "leads": 0,
+        "total_conv": 16,
+        "cost_per_conv": 26448.75
+      },
+      {
+        "name": "TheCity - Giải pháp ghế - Lead - 11.9.26",
+        "brand": "THE CITY",
+        "spend": 902233.0,
+        "impressions": 6383,
+        "clicks": 139,
+        "ctr": 2.177659,
+        "msgs": 11,
+        "leads": 1,
+        "total_conv": 12,
+        "cost_per_conv": 75186.08333333333
+      },
+      {
+        "name": "RPB EDU -  Page City Athome - Ghế Rooky - Lead - 15.9.26",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 607003.0,
+        "impressions": 4296,
+        "clicks": 135,
+        "ctr": 3.142458,
+        "msgs": 25,
+        "leads": 1,
+        "total_conv": 26,
+        "cost_per_conv": 23346.26923076923
+      },
+      {
+        "name": "The Mia - Giải pháp văn phòng - Lead - 24.09.26",
+        "brand": "THE MIA",
+        "spend": 1906226.0,
+        "impressions": 10026,
+        "clicks": 244,
+        "ctr": 2.433672,
+        "msgs": 18,
+        "leads": 1,
+        "total_conv": 19,
+        "cost_per_conv": 100327.68421052632
+      },
+      {
+        "name": "RPB EDU -  Page City Athome - GHẾ NÂNG HẠ MOTO II - Lead - 2.10.26",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 853546.0,
+        "impressions": 6576,
+        "clicks": 385,
+        "ctr": 5.854623,
+        "msgs": 42,
+        "leads": 2,
+        "total_conv": 44,
+        "cost_per_conv": 19398.772727272728
+      },
+      {
+        "name": "RPB EDU - Ghế Titan - Video - Lead - 8.10.26",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 1100831.0,
+        "impressions": 9482,
+        "clicks": 332,
+        "ctr": 3.501371,
+        "msgs": 47,
+        "leads": 2,
+        "total_conv": 49,
+        "cost_per_conv": 22465.938775510203
+      },
+      {
+        "name": "RPB EDU - Phone.Cora.Vinuni - Lead - 15.10.26",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 1669210.0,
+        "impressions": 13843,
+        "clicks": 516,
+        "ctr": 3.727516,
+        "msgs": 66,
+        "leads": 10,
+        "total_conv": 76,
+        "cost_per_conv": 21963.28947368421
+      },
+      {
+        "name": "TheCity - Combo ghế - Lead - 21.10.26",
+        "brand": "THE CITY",
+        "spend": 1794757.0,
+        "impressions": 11901,
+        "clicks": 327,
+        "ctr": 2.747668,
+        "msgs": 26,
+        "leads": 0,
+        "total_conv": 26,
+        "cost_per_conv": 69029.11538461539
+      },
+      {
+        "name": "RPB EDU - The City athome - Ghế Rooky Voucher - 22.10",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 323040.0,
+        "impressions": 2140,
+        "clicks": 62,
+        "ctr": 2.897196,
+        "msgs": 7,
+        "leads": 0,
+        "total_conv": 7,
+        "cost_per_conv": 46148.57142857143
+      },
+      {
+        "name": "RPB EDU - Phonebooth - Lead - 23.10",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 2622256.0,
+        "impressions": 26313,
+        "clicks": 608,
+        "ctr": 2.310645,
+        "msgs": 22,
+        "leads": 4,
+        "total_conv": 26,
+        "cost_per_conv": 100856.0
+      },
+      {
+        "name": "RPB EDU - Phonebooth Tiếng anh - Lead - 29.10",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 1720040.0,
+        "impressions": 12835,
+        "clicks": 279,
+        "ctr": 2.173744,
+        "msgs": 20,
+        "leads": 2,
+        "total_conv": 22,
+        "cost_per_conv": 78183.63636363637
+      },
+      {
+        "name": "TheCity - Giải pháp bàn làm việc - Lead - 301.10",
+        "brand": "THE CITY",
+        "spend": 912675.0,
+        "impressions": 6754,
+        "clicks": 358,
+        "ctr": 5.300563,
+        "msgs": 11,
+        "leads": 2,
+        "total_conv": 13,
+        "cost_per_conv": 70205.76923076923
+      },
+      {
+        "name": "The Mia - Ghế Boss I - Lead - 31.10",
+        "brand": "THE MIA",
+        "spend": 159247.0,
+        "impressions": 1736,
+        "clicks": 113,
+        "ctr": 6.509217,
+        "msgs": 1,
+        "leads": 0,
+        "total_conv": 1,
+        "cost_per_conv": 159247.0
+      },
+      {
+        "name": "RPB EDU - The City Athome - Rooky - 3.11",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 462931.0,
+        "impressions": 3230,
+        "clicks": 77,
+        "ctr": 2.383901,
+        "msgs": 6,
+        "leads": 1,
+        "total_conv": 7,
+        "cost_per_conv": 66133.0
+      },
+      {
+        "name": "RPB EDU - The City Athome - Ghế đa năng - 4.11",
+        "brand": "RPB EDU & PUBLIC",
+        "spend": 1121220.0,
+        "impressions": 8198,
+        "clicks": 521,
+        "ctr": 6.355209,
+        "msgs": 43,
+        "leads": 4,
+        "total_conv": 47,
+        "cost_per_conv": 23855.744680851065
+      },
+      {
+        "name": "TheCity - Giải pháp - Lead - 13.11",
+        "brand": "THE CITY",
+        "spend": 75036.0,
+        "impressions": 454,
+        "clicks": 15,
+        "ctr": 3.303965,
+        "msgs": 1,
+        "leads": 0,
+        "total_conv": 1,
+        "cost_per_conv": 75036.0
+      },
+      {
+        "name": "RPB - BLACK FRIDAY - 17.11.26",
+        "brand": "KHÁC / CHUNG",
+        "spend": 94263.0,
+        "impressions": 327,
+        "clicks": 12,
+        "ctr": 3.669725,
+        "msgs": 1,
+        "leads": 0,
+        "total_conv": 1,
+        "cost_per_conv": 94263.0
+      }
+    ]
+  },
+  "chatbot": {
+    "total_convs": 309,
+    "phones": 23,
+    "orders_tagged": 17,
+    "platforms": {
+      "RPB - Nội Thất Tổng Thể - Education & Public Seating": 104,
+      "Nội thất Rồng Phương Bắc": 61,
+      "The Mia - Nội thất văn phòng hiện đại": 40,
+      "The City - Giải pháp Nội thất văn phòng cao cấp": 22,
+      "Nội thất The City At Home - Furniture": 59,
+      "RPB Zalo OA Đại Lý": 2,
+      "Webchat": 21
+    },
+    "platform_phones": {
+      "Nội thất Rồng Phương Bắc": 13,
+      "RPB - Nội Thất Tổng Thể - Education & Public Seating": 6,
+      "The Mia - Nội thất văn phòng hiện đại": 3,
+      "Nội thất The City At Home - Furniture": 1
+    }
+  },
+  "sales": {
+    "total_mkt_standard": 1397236996,
+    "total_mkt_expanded": 1484785896,
+    "by_brand_standard": {
+      "THE CITY": 1019997830,
+      "THE MIA": 333227800,
+      "RPB EDU & PUBLIC": 9796055,
+      "Phí vận chuyển / Khác": 34215311
+    },
+    "by_brand_expanded": {
+      "THE CITY": 1019997830,
+      "THE MIA": 333227800,
+      "RPB EDU & PUBLIC": 97344955,
+      "Phí vận chuyển / Khác": 34215311
+    },
+    "by_region": {
+      "HCM": 1352355196,
+      "HN_standard": 44881800,
+      "HN_expanded": 132430700
+    }
+  },
+  "sales_reps": {
+    "hcm_anh": {
+      "city": 817516000,
+      "mia": 225009000,
+      "edu": 0,
+      "fee": 26163390,
+      "total": 1068688390,
+      "sos": 38,
+      "rows": 100
+    },
+    "hcm_khoa": {
+      "city": 164219830,
+      "mia": 101599000,
+      "edu": 9796055,
+      "fee": 8051921,
+      "total": 283666806,
+      "sos": 30,
+      "rows": 63
+    },
+    "hn_dao": {
+      "city": 38262000,
+      "mia": 0,
+      "edu": 0,
+      "fee": 0,
+      "total": 38262000,
+      "sos": 1,
+      "rows": 6
+    },
+    "hn_minh": {
+      "city": 0,
+      "mia": 6619800,
+      "edu": 0,
+      "fee": 0,
+      "total": 6619800,
+      "sos": 1,
+      "rows": 1
+    },
+    "hn_yen": {
+      "city": 0,
+      "mia": 0,
+      "edu": 87548900,
+      "fee": 0,
+      "total": 87548900,
+      "sos": 5,
+      "rows": 10
+    }
+  },
+  "google_ads": {
+    "total_spend": 59207862,
+    "total_clicks": 56775,
+    "total_impressions": 475377,
+    "total_conversions": 1787.29,
+    "the_city": {
+      "account_name": "Nguyễn Thành Long",
+      "account_id": "563-582-4813",
+      "brand": "THE CITY",
+      "total_spend": 47659730,
+      "total_clicks": 55990,
+      "total_impressions": 464459,
+      "total_conversions": 1604.29,
+      "avg_ctr": 12.05,
+      "avg_cpa": 29708,
+      "campaigns": [
+        {
+          "name": "The City-Ghế VP-Search-Miền Nam-10122025",
+          "type": "Tìm kiếm",
+          "spend": 11426246,
+          "clicks": 830,
+          "impressions": 57906,
+          "conversions": 14.21,
+          "ctr": 1.43,
+          "cpa": 804051
+        },
+        {
+          "name": "The City -Bàn VP-Search-Miền Bắc-10122025",
+          "type": "Tìm kiếm",
+          "spend": 9235920,
+          "clicks": 197,
+          "impressions": 1019,
+          "conversions": 15.0,
+          "ctr": 19.33,
+          "cpa": 615728
+        },
+        {
+          "name": "The CiTy_Remarketing_90D_9/2026",
+          "type": "Hiển thị",
+          "spend": 9003450,
+          "clicks": 24330,
+          "impressions": 158598,
+          "conversions": 740.78,
+          "ctr": 15.34,
+          "cpa": 12154
+        },
+        {
+          "name": "The City-Ghế VP-Search-Miền Bắc-10122025",
+          "type": "Tìm kiếm",
+          "spend": 7452985,
+          "clicks": 232,
+          "impressions": 2826,
+          "conversions": 12.5,
+          "ctr": 8.21,
+          "cpa": 596239
+        },
+        {
+          "name": "TheCity-hiển thị miền bắc -26/08/26 #2",
+          "type": "Performance Max",
+          "spend": 4959114,
+          "clicks": 28547,
+          "impressions": 226706,
+          "conversions": 722.01,
+          "ctr": 12.59,
+          "cpa": 6869
+        },
+        {
+          "name": "The City-Search-Brand City-Miền Nam-10122025",
+          "type": "Tìm kiếm",
+          "spend": 2419345,
+          "clicks": 475,
+          "impressions": 6336,
+          "conversions": 15.0,
+          "ctr": 7.5,
+          "cpa": 161275
+        },
+        {
+          "name": "The City -Search-Nội thất phòng giám đốc-phòng họp",
+          "type": "Tìm kiếm",
+          "spend": 2317137,
+          "clicks": 1162,
+          "impressions": 10279,
+          "conversions": 80.79,
+          "ctr": 11.3,
+          "cpa": 28682
+        },
+        {
+          "name": "The City - Search-Brand City-Miền Bắc-10122025",
+          "type": "Tìm kiếm",
+          "spend": 845533,
+          "clicks": 217,
+          "impressions": 2289,
+          "conversions": 4.0,
+          "ctr": 9.48,
+          "cpa": 211383
+        }
+      ]
+    },
+    "the_mia": {
+      "account_name": "The Mia",
+      "account_id": "958-066-7486",
+      "brand": "THE MIA",
+      "total_spend": 11548132,
+      "total_clicks": 785,
+      "total_impressions": 10918,
+      "total_conversions": 183.0,
+      "avg_ctr": 7.19,
+      "avg_cpa": 63105,
+      "campaigns": [
+        {
+          "name": "The Mia - Ghế Văn Phòng - Tìm kiếm - 2.11",
+          "type": "Tìm kiếm",
+          "spend": 5943669,
+          "clicks": 391,
+          "impressions": 6585,
+          "conversions": 91.5,
+          "ctr": 5.94,
+          "cpa": 64958
+        },
+        {
+          "name": "Search - Brand Mia - Miền Nam-10122025",
+          "type": "Tìm kiếm",
+          "spend": 2918440,
+          "clicks": 273,
+          "impressions": 2433,
+          "conversions": 6.5,
+          "ctr": 11.22,
+          "cpa": 448991
+        },
+        {
+          "name": "The Mia -Bàn VP-Search-Miền Bắc-10122025",
+          "type": "Tìm kiếm",
+          "spend": 1477020,
+          "clicks": 34,
+          "impressions": 884,
+          "conversions": 45.0,
+          "ctr": 3.85,
+          "cpa": 32823
+        },
+        {
+          "name": "The Mia-Ghế VP-Search-Miền Bắc-10122025",
+          "type": "Tìm kiếm",
+          "spend": 873048,
+          "clicks": 22,
+          "impressions": 710,
+          "conversions": 29.0,
+          "ctr": 3.1,
+          "cpa": 30105
+        },
+        {
+          "name": "Search - Brand Mia - Miền Bắc-10122025",
+          "type": "Tìm kiếm",
+          "spend": 335955,
+          "clicks": 65,
+          "impressions": 306,
+          "conversions": 11.0,
+          "ctr": 21.24,
+          "cpa": 30541
+        }
+      ]
+    }
+  },
+  "combined_ads": {
+    "total_spend": 89241256.0,
+    "fb_spend": 30033394.0,
+    "gg_spend": 59207862,
+    "cir_standard": 6.386980609265231,
+    "cir_expanded": 6.010378751604198,
+    "roas_standard": 15.656850414566106,
+    "roas_expanded": 16.637886584653177,
+    "by_brand": {
+      "THE CITY": {
+        "fb": 5840661,
+        "gg": 47659730,
+        "total_spend": 53500391,
+        "revenue": 1019997830,
+        "cir": 5.245147531343278
+      },
+      "THE MIA": {
+        "fb": 9088260,
+        "gg": 11548132,
+        "total_spend": 20636392,
+        "revenue": 333227800,
+        "cir": 6.1928782652587815
+      },
+      "RPB EDU & PUBLIC": {
+        "fb": 14962619,
+        "gg": 0,
+        "total_spend": 14962619,
+        "revenue": 9796055,
+        "revenue_expanded": 97344955,
+        "cir": 152.74127186913506
+      }
+    }
+  }
+}
