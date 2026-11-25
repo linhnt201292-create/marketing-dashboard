@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="flex items-center gap-2.5">
-                <span class="text-xs text-slate-500 hidden sm:inline" id="lastUpdated">Cập nhật: 18/11/2026 13:28:20</span>
+                <span class="text-xs text-slate-500 hidden sm:inline" id="lastUpdated">Cập nhật: 25/11/2026 10:00:00</span>
                 <button onclick="location.reload()" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors border border-slate-300">
                     <svg class="w-3.5 h-3.5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.03 0 01-15.357-2m15.357 2H15"></path></svg>
                     Làm mới
@@ -708,7 +708,7 @@
                         <h3 class="text-sm font-bold text-slate-900" id="googleAdsTableTitle">Chi tiết Chiến dịch Google Ads (01/11 - 25/11/2026)</h3>
                         <p class="text-xs text-slate-500">2 Tài khoản: Nguyễn Thành Long (The City) & The Mia (The Mia)</p>
                     </div>
-                    <span class="px-2.5 py-1 text-xs rounded-full bg-blue-100 text-blue-800 font-bold">13 Chiến dịch</span>
+                    <span class="px-2.5 py-1 text-xs rounded-full bg-blue-100 text-blue-800 font-bold" id="ggCampsCountBadge">13 Chiến dịch</span>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-xs">
@@ -725,7 +725,140 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-100 font-medium" id="googleCampaignsTableBody">
-                            <!-- Dynamically populated by JS based on selected week -->
+                            <!-- The City Campaigns (Pre-rendered default) -->
+                            <tr class="bg-blue-50/50 font-bold text-blue-900"><td colspan="8" class="p-2.5 px-3">Tài khoản Nguyễn Thành Long — The City — Tổng chi: 50.744.626 đ</td></tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">The City-Ghế VP-Search-Miền Nam-10122025</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-city">The City</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">12.165.839 đ</td>
+                                <td class="p-3 text-right font-medium">752</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">13</td>
+                                <td class="p-3 text-right text-rose-700 font-bold">943.088 đ</td>
+                                <td class="p-3 text-right">1.19%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">The City -Bàn VP-Search-Miền Bắc-10122025</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-city">The City</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">9.833.738 đ</td>
+                                <td class="p-3 text-right font-medium">179</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">14</td>
+                                <td class="p-3 text-right text-rose-700 font-bold">723.069 đ</td>
+                                <td class="p-3 text-right">16.08%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">The CiTy_Remarketing_90D_9/2026</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-city">The City</span></td>
+                                <td class="p-3 text-slate-500">Hiển thị</td>
+                                <td class="p-3 text-right font-bold text-slate-900">9.586.221 đ</td>
+                                <td class="p-3 text-right font-medium">22.051</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">673</td>
+                                <td class="p-3 text-right text-emerald-700 font-bold">14.240 đ</td>
+                                <td class="p-3 text-right">12.73%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">The City-Ghế VP-Search-Miền Bắc-10122025</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-city">The City</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">7.935.398 đ</td>
+                                <td class="p-3 text-right font-medium">210</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">11</td>
+                                <td class="p-3 text-right text-rose-700 font-bold">696.088 đ</td>
+                                <td class="p-3 text-right">6.80%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">TheCity-hiển thị miền bắc -26/08/26 #2</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-city">The City</span></td>
+                                <td class="p-3 text-slate-500">Performance Max</td>
+                                <td class="p-3 text-right font-bold text-slate-900">5.280.105 đ</td>
+                                <td class="p-3 text-right font-medium">25.873</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">656</td>
+                                <td class="p-3 text-right text-emerald-700 font-bold">8.046 đ</td>
+                                <td class="p-3 text-right">10.45%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">The City-Search-Brand City-Miền Nam-10122025</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-city">The City</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">2.575.943 đ</td>
+                                <td class="p-3 text-right font-medium">431</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">14</td>
+                                <td class="p-3 text-right text-rose-700 font-bold">189.408 đ</td>
+                                <td class="p-3 text-right">6.23%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">The City -Search-Nội thất phòng giám đốc-phòng họp</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-city">The City</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">2.467.120 đ</td>
+                                <td class="p-3 text-right font-medium">1.053</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">73</td>
+                                <td class="p-3 text-right text-emerald-700 font-bold">33.612 đ</td>
+                                <td class="p-3 text-right">9.38%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">The City - Search-Brand City-Miền Bắc-10122025</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-city">The City</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">900.262 đ</td>
+                                <td class="p-3 text-right font-medium">197</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">3.6</td>
+                                <td class="p-3 text-right text-rose-700 font-bold">250.073 đ</td>
+                                <td class="p-3 text-right">7.88%</td>
+                            </tr>
+                            <!-- The Mia Campaigns (Pre-rendered default) -->
+                            <tr class="bg-blue-50/50 font-bold text-blue-900"><td colspan="8" class="p-2.5 px-3">Tài khoản The Mia — The Mia — Tổng chi: 19.412.701 đ</td></tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">The Mia - Ghế Văn Phòng - Tìm kiếm - 2.11</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-mia">The Mia</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">9.991.457 đ</td>
+                                <td class="p-3 text-right font-medium">645</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">279</td>
+                                <td class="p-3 text-right text-emerald-700 font-bold">35.812 đ</td>
+                                <td class="p-3 text-right">5.51%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">Search - Brand Mia - Miền Nam-10122025</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-mia">The Mia</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">4.905.971 đ</td>
+                                <td class="p-3 text-right font-medium">450</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">20</td>
+                                <td class="p-3 text-right text-rose-700 font-bold">247.776 đ</td>
+                                <td class="p-3 text-right">10.40%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">The Mia -Bàn VP-Search-Miền Bắc-10122025</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-mia">The Mia</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">2.482.908 đ</td>
+                                <td class="p-3 text-right font-medium">56</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">137</td>
+                                <td class="p-3 text-right text-emerald-700 font-bold">18.097 đ</td>
+                                <td class="p-3 text-right">3.56%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">The Mia-Ghế VP-Search-Miền Bắc-10122025</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-mia">The Mia</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">1.467.616 đ</td>
+                                <td class="p-3 text-right font-medium">36</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">88</td>
+                                <td class="p-3 text-right text-emerald-700 font-bold">16.602 đ</td>
+                                <td class="p-3 text-right">2.85%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-3 font-semibold text-slate-900">Search - Brand Mia - Miền Bắc-10122025</td>
+                                <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold badge-brand-mia">The Mia</span></td>
+                                <td class="p-3 text-slate-500">Tìm kiếm</td>
+                                <td class="p-3 text-right font-bold text-slate-900">564.749 đ</td>
+                                <td class="p-3 text-right font-medium">107</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900">34</td>
+                                <td class="p-3 text-right text-emerald-700 font-bold">16.858 đ</td>
+                                <td class="p-3 text-right">19.67%</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -906,6 +1039,7 @@ window.__errors = [];
     };
 
     function formatMoneyVND(val) {
+        if (typeof val !== 'number' || isNaN(val)) return '0 đ';
         return new Intl.NumberFormat('vi-VN').format(Math.round(val)) + ' đ';
     }
 
@@ -1275,25 +1409,26 @@ window.__errors = [];
                 tr.className = 'hover:bg-slate-50 transition-colors';
                 
                 let badgeClass = 'badge-brand-other';
-                if (c.brand === 'THE CITY') badgeClass = 'badge-brand-city';
-                else if (c.brand === 'THE MIA') badgeClass = 'badge-brand-mia';
-                else if (c.brand === 'RPB EDU & PUBLIC') badgeClass = 'badge-brand-edu';
+                const br = (c.brand || '').toUpperCase();
+                if (br.includes('CITY')) badgeClass = 'badge-brand-city';
+                else if (br.includes('MIA')) badgeClass = 'badge-brand-mia';
+                else if (br.includes('EDU')) badgeClass = 'badge-brand-edu';
 
-                const spend = typeof c.spend === 'number' ? c.spend : 0;
-                const msgs = typeof c.msgs === 'number' ? c.msgs : 0;
-                const leads = typeof c.leads === 'number' ? c.leads : 0;
-                const totalConv = typeof c.total_conv === 'number' ? c.total_conv : (msgs + leads);
+                const spend = (typeof c.spend === 'number' && !isNaN(c.spend)) ? c.spend : 0;
+                const msgs = (typeof c.msgs === 'number' && !isNaN(c.msgs)) ? c.msgs : 0;
+                const leads = (typeof c.leads === 'number' && !isNaN(c.leads)) ? c.leads : 0;
+                const totalConv = (typeof c.total_conv === 'number' && !isNaN(c.total_conv)) ? c.total_conv : (msgs + leads);
                 
                 let cpaVal = 0;
-                if (totalConv > 0) {
-                    cpaVal = Math.round(spend / totalConv);
-                } else if (typeof c.cpa === 'number' && c.cpa > 0) {
+                if (typeof c.cpa === 'number' && !isNaN(c.cpa) && c.cpa > 0) {
                     cpaVal = c.cpa;
-                } else if (typeof c.cost_per_conv === 'number' && c.cost_per_conv > 0) {
+                } else if (typeof c.cost_per_conv === 'number' && !isNaN(c.cost_per_conv) && c.cost_per_conv > 0) {
                     cpaVal = c.cost_per_conv;
+                } else if (totalConv > 0) {
+                    cpaVal = Math.round(spend / totalConv);
                 }
 
-                const cpaText = cpaVal > 0 ? formatMoneyVND(cpaVal) : '-';
+                const cpaText = (typeof cpaVal === 'number' && !isNaN(cpaVal) && cpaVal > 0) ? formatMoneyVND(cpaVal) : '-';
 
                 let evalBadge = '<span class="px-2 py-0.5 rounded text-[11px] bg-emerald-100 text-emerald-800 font-semibold">Tốt</span>';
                 if (cpaVal > 100000) {
@@ -1302,50 +1437,21 @@ window.__errors = [];
                     evalBadge = '<span class="px-2 py-0.5 rounded text-[11px] bg-amber-100 text-amber-800 font-semibold">Chưa ra số</span>';
                 }
 
-                const ctrVal = typeof c.ctr === 'number' ? c.ctr.toFixed(2) + '%' : '-';
+                const ctrVal = (typeof c.ctr === 'number' && !isNaN(c.ctr)) ? c.ctr.toFixed(2) + '%' : '-';
 
                 tr.innerHTML = `
                     <td class="p-3 max-w-xs truncate" title="${c.name || ''}"><strong>${c.name || ''}</strong></td>
-                    <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold ${badgeClass}">${c.brand || 'Khác'}</span></td>
+                    <td class="p-3"><span class="px-2 py-0.5 rounded text-[11px] font-semibold ${badgeClass}">${c.brand || ''}</span></td>
                     <td class="p-3 text-right font-bold">${formatMoneyVND(spend)}</td>
-                    <td class="p-3 text-right font-semibold">${msgs}</td>
-                    <td class="p-3 text-right font-semibold">${leads}</td>
-                    <td class="p-3 text-right font-extrabold text-slate-900">${totalConv}</td>
+                    <td class="p-3 text-right">${msgs}</td>
+                    <td class="p-3 text-right">${leads}</td>
+                    <td class="p-3 text-right font-bold text-slate-900">${totalConv}</td>
                     <td class="p-3 text-right font-bold text-orange-600">${cpaText}</td>
                     <td class="p-3 text-right">${ctrVal}</td>
                     <td class="p-3 text-center">${evalBadge}</td>
                 `;
                 tbody.appendChild(tr);
             });
-        }
-
-        function filterCampaigns(brand) {
-            currentFbBrand = brand;
-            document.querySelectorAll('.filter-btn').forEach(b => {
-                b.classList.remove('bg-orange-600', 'text-white');
-                b.classList.add('bg-slate-100', 'text-slate-700');
-            });
-            const activeBtn = document.getElementById('filter-' + brand);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-slate-100', 'text-slate-700');
-                activeBtn.classList.add('bg-orange-600', 'text-white');
-            }
-
-            let filtered = currentPeriodFbCampaigns;
-            if (brand !== 'ALL') {
-                filtered = currentPeriodFbCampaigns.filter(c => c.brand === brand);
-            }
-            renderCampaignsTable(filtered);
-        }
-
-        function searchCampaigns() {
-            const query = (document.getElementById('campaignSearch').value || '').toLowerCase();
-            let base = currentPeriodFbCampaigns;
-            if (currentFbBrand !== 'ALL') {
-                base = base.filter(c => c.brand === currentFbBrand);
-            }
-            const filtered = base.filter(c => (c.name || '').toLowerCase().includes(query));
-            renderCampaignsTable(filtered);
         }
 
         function renderGoogleCampaignsTable(camps) {
