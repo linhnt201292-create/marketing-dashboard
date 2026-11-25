@@ -15,7 +15,7 @@ from datetime import datetime
 # ==============================================================================
 
 # 1. Thông tin Facebook Ads (Đã cấu hình sẵn tài khoản RPB HCM của bạn)
-FB_ACCESS_TOKEN = "EAAQSjFaeEA0BTDdGL4zeO4dRvqZCAXAbWhHXcrZBIrO4N5NfxQFp96xw2PfUNeT2HnmuSHyjDSCBH5g6igVGHsZBaHWB6qhGL86sKMNgGwX9WQA6nKg5DQ0zC3A4qWpFXNIP3HJH1xDWvTvbucJzfJf77dZCP3wBwQHsZA3cyPkXGOZAue71WZBoQSx3PHg4nf6AjuwuDSDleweTNUxUlUwZBBj5hnx9j3kXPQnfXlYxwld9Blz8M8PPt4MAeJTtVnWqOOddENzFTMj5wK31qTy3uWeZA0cM1PUSTRZAWHIKsZD"
+FB_ACCESS_TOKEN = "EAAQSjFaeEA0BTKGgaEfyacviQYCglXjpKKRG1Wk0zBVdnKwXiPNQszpDkrHic1Tls6tCVZA2u4eeNvxI0DsUTpZAFM5I3OAeJ8hrTvp6CJs9quxKTZCUyvqByYXjk7dfWGhah5XG3FVnmJmptZAemObcAtZCShTAzBOqJMhgh7CZBNmM1oQj1IVAvoHqlpnybLpAZDZD"
 AD_ACCOUNT_ID = "act_1113055687224460"  # RPB ADs account HCM
 
 # 2. Cấu hình gửi Zalo
