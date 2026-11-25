@@ -627,67 +627,98 @@
 
             <!-- Rep Table -->
             <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
-                <div class="p-4 border-b border-slate-100">
-                    <h3 class="text-sm font-bold text-slate-900">Bảng Doanh số Chi tiết theo Từng Nhân sự & Thương hiệu</h3>
+                <div class="p-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+                    <div>
+                        <h3 class="text-sm font-bold text-slate-900">Bảng Doanh số Chi tiết theo Từng Nhân sự & Thương hiệu</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Phân bổ doanh thu thực tế SO ERP theo thương hiệu phụ trách</p>
+                    </div>
+                    <span class="px-2.5 py-1 text-xs rounded-full bg-slate-200/70 text-slate-700 font-bold">5 Nhân sự</span>
                 </div>
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs">
+                    <table class="w-full text-left text-xs" id="repSummaryTable">
                         <thead class="bg-slate-50 text-slate-600 font-semibold uppercase tracking-wider border-b border-slate-200">
                             <tr>
-                                <th class="p-3">Nhân sự</th>
-                                <th class="p-3">Khu vực / Phụ trách</th>
-                                <th class="p-3 text-right">The City</th>
-                                <th class="p-3 text-right">The MIA</th>
-                                <th class="p-3 text-right">Edu & Public</th>
-                                <th class="p-3 text-right">Phí vận chuyển</th>
-                                <th class="p-3 text-right">TỔNG CỘNG</th>
-                                <th class="p-3 text-center">Số đơn (SO)</th>
+                                <th class="p-3 whitespace-nowrap">Nhân sự</th>
+                                <th class="p-3 whitespace-nowrap">Khu vực / Phụ trách</th>
+                                <th class="p-3 text-right whitespace-nowrap">The City</th>
+                                <th class="p-3 text-right whitespace-nowrap">The MIA</th>
+                                <th class="p-3 text-right whitespace-nowrap">Edu & Public</th>
+                                <th class="p-3 text-right whitespace-nowrap">Phí vận chuyển</th>
+                                <th class="p-3 text-right whitespace-nowrap">TỔNG CỘNG</th>
+                                <th class="p-3 text-center whitespace-nowrap">Số đơn (SO)</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-100 font-medium">
+                        <tbody class="divide-y divide-slate-100 font-medium" id="repSummaryTableBody">
                             <tr class="hover:bg-slate-50">
                                 <td class="p-3"><strong>Lê Minh Khoa</strong> (HCMKDKHOA.02)</td>
                                 <td class="p-3 text-slate-500">HCM - Toàn bộ doanh số</td>
-                                <td class="p-3 text-right font-bold text-blue-700">164.219.830 đ</td>
-                                <td class="p-3 text-right font-bold text-emerald-700">101.599.000 đ</td>
-                                <td class="p-3 text-right font-bold text-amber-700">9.796.055 đ</td>
-                                <td class="p-3 text-right text-slate-500">8.051.921 đ</td>
-                                <td class="p-3 text-right font-extrabold text-slate-900">286.447.506 đ</td>
-                                <td class="p-3 text-center font-bold">31</td>
+                                <td class="p-3 text-right font-bold text-blue-700 whitespace-nowrap">203.869.830 đ</td>
+                                <td class="p-3 text-right font-bold text-emerald-700 whitespace-nowrap">136.289.500 đ</td>
+                                <td class="p-3 text-right font-bold text-amber-700 whitespace-nowrap">9.796.055 đ</td>
+                                <td class="p-3 text-right text-slate-500 whitespace-nowrap">8.690.117 đ</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900 whitespace-nowrap">358.645.502 đ</td>
+                                <td class="p-3 text-center font-bold whitespace-nowrap">36</td>
                             </tr>
                             <tr class="hover:bg-slate-50">
                                 <td class="p-3"><strong>Vũ Hoàng Yến</strong> (HNIKDYEN.01)</td>
                                 <td class="p-3 text-slate-500">HN - Nguồn MKT Edu</td>
-                                <td class="p-3 text-right text-slate-400">0 đ</td>
-                                <td class="p-3 text-right text-slate-400">0 đ</td>
-                                <td class="p-3 text-right font-bold text-amber-700">87.548.900 đ</td>
-                                <td class="p-3 text-right text-slate-400">0 đ</td>
-                                <td class="p-3 text-right font-extrabold text-slate-900">87.548.900 đ</td>
-                                <td class="p-3 text-center font-bold">5</td>
+                                <td class="p-3 text-right text-slate-400 whitespace-nowrap">0 đ</td>
+                                <td class="p-3 text-right text-slate-400 whitespace-nowrap">0 đ</td>
+                                <td class="p-3 text-right font-bold text-amber-700 whitespace-nowrap">88.583.900 đ</td>
+                                <td class="p-3 text-right text-slate-500 whitespace-nowrap">250.000 đ</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900 whitespace-nowrap">88.833.900 đ</td>
+                                <td class="p-3 text-center font-bold whitespace-nowrap">6</td>
                             </tr>
                             <tr class="hover:bg-slate-50">
                                 <td class="p-3"><strong>Vũ Thị Đào</strong> (HNIKDDAO.01)</td>
                                 <td class="p-3 text-slate-500">HN - Nguồn MKT (Dự án Chiya)</td>
-                                <td class="p-3 text-right font-bold text-blue-700">612.996.000 đ</td>
-                                <td class="p-3 text-right font-bold text-emerald-700">300.228.450 đ</td>
-                                <td class="p-3 text-right text-slate-400">0 đ</td>
-                                <td class="p-3 text-right text-slate-500">65.000.000 đ</td>
-                                <td class="p-3 text-right font-extrabold text-slate-900">978.224.450 đ</td>
-                                <td class="p-3 text-center font-bold">3</td>
+                                <td class="p-3 text-right font-bold text-blue-700 whitespace-nowrap">840.447.450 đ</td>
+                                <td class="p-3 text-right font-bold text-emerald-700 whitespace-nowrap">72.777.000 đ</td>
+                                <td class="p-3 text-right text-slate-400 whitespace-nowrap">0 đ</td>
+                                <td class="p-3 text-right text-slate-500 whitespace-nowrap">65.000.000 đ</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900 whitespace-nowrap">978.224.450 đ</td>
+                                <td class="p-3 text-center font-bold whitespace-nowrap">3</td>
                             </tr>
                             <tr class="hover:bg-slate-50">
                                 <td class="p-3"><strong>Nguyễn Đức Minh</strong> (HNIKDMINH.02)</td>
                                 <td class="p-3 text-slate-500">HN - Nguồn MKT</td>
-                                <td class="p-3 text-right text-slate-400">0 đ</td>
-                                <td class="p-3 text-right font-bold text-emerald-700">6.619.800 đ</td>
-                                <td class="p-3 text-right text-slate-400">0 đ</td>
-                                <td class="p-3 text-right text-slate-400">0 đ</td>
-                                <td class="p-3 text-right font-extrabold text-slate-900">6.619.800 đ</td>
-                                <td class="p-3 text-center font-bold">1</td>
+                                <td class="p-3 text-right font-bold text-blue-700 whitespace-nowrap">6.049.620 đ</td>
+                                <td class="p-3 text-right font-bold text-emerald-700 whitespace-nowrap">6.619.800 đ</td>
+                                <td class="p-3 text-right text-slate-400 whitespace-nowrap">0 đ</td>
+                                <td class="p-3 text-right text-slate-400 whitespace-nowrap">0 đ</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900 whitespace-nowrap">12.669.420 đ</td>
+                                <td class="p-3 text-center font-bold whitespace-nowrap">2</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3"><strong>Phạm Trọng Nghĩa</strong> (HCMKDNGHIA.02)</td>
+                                <td class="p-3 text-slate-500">HCM - Nguồn MKT</td>
+                                <td class="p-3 text-right text-slate-400 whitespace-nowrap">0 đ</td>
+                                <td class="p-3 text-right font-bold text-emerald-700 whitespace-nowrap">2.757.408 đ</td>
+                                <td class="p-3 text-right text-slate-400 whitespace-nowrap">0 đ</td>
+                                <td class="p-3 text-right text-slate-400 whitespace-nowrap">0 đ</td>
+                                <td class="p-3 text-right font-extrabold text-slate-900 whitespace-nowrap">2.757.408 đ</td>
+                                <td class="p-3 text-center font-bold whitespace-nowrap">1</td>
                             </tr>
                         </tbody>
+                        <tfoot class="bg-amber-100/95 font-extrabold border-t-2 border-amber-400 text-slate-900 shadow-sm" id="repTableFoot">
+                            <tr class="bg-amber-100/95 font-extrabold border-t-2 border-amber-400 text-slate-900">
+                                <td class="p-3 uppercase text-xs tracking-wider whitespace-nowrap" colspan="2">
+                                    <div class="flex items-center gap-1.5 font-black text-amber-950 whitespace-nowrap">
+                                        <span class="w-2 h-2 rounded-full bg-orange-600 animate-pulse shrink-0"></span>
+                                        TỔNG THEO BRAND
+                                    </div>
+                                </td>
+                                <td class="p-3 text-right text-blue-800 font-black text-xs sm:text-sm whitespace-nowrap" id="rep_tot_city">1.050.366.900&nbsp;đ</td>
+                                <td class="p-3 text-right text-emerald-800 font-black text-xs sm:text-sm whitespace-nowrap" id="rep_tot_mia">218.443.708&nbsp;đ</td>
+                                <td class="p-3 text-right text-amber-800 font-black text-xs sm:text-sm whitespace-nowrap" id="rep_tot_edu">98.379.955&nbsp;đ</td>
+                                <td class="p-3 text-right text-slate-700 font-black text-xs sm:text-sm whitespace-nowrap" id="rep_tot_fee">73.940.117&nbsp;đ</td>
+                                <td class="p-3 text-right text-orange-600 font-black text-xs sm:text-sm whitespace-nowrap" id="rep_tot_all">1.441.130.680&nbsp;đ</td>
+                                <td class="p-3 text-center text-slate-900 font-black text-xs sm:text-sm whitespace-nowrap" id="rep_tot_sos">48</td>
+                            </tr>
+                        </tfoot>
                     </table>
-                </div></div>
+                </div>
+            </div>
 
             <!-- BẢNG CHI TIẾT TỪNG ĐƠN HÀNG SO PHÂN THEO KHU VỰC & SALE -->
             <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden mt-6">
@@ -1863,7 +1894,7 @@ window.__errors = [];
         if (val === null || val === undefined || val === '') return '0 đ';
         const num = typeof val === 'number' ? val : parseFloat(String(val).replace(/[^0-9.-]+/g, ''));
         if (isNaN(num)) return '0 đ';
-        return new Intl.NumberFormat('vi-VN').format(Math.round(num)) + ' đ';
+        return new Intl.NumberFormat('vi-VN').format(Math.round(num)) + '\u00A0đ';
     }
     var formatVND = formatMoneyVND;
 
@@ -2156,10 +2187,11 @@ window.__errors = [];
             { id: 'khoa', code: 'HCMKDKHOA.02' },
             { id: 'yen', code: 'HNIKDYEN.01' },
             { id: 'dao', code: 'HNIKDDAO.01' },
-            { id: 'minh', code: 'HNIKDMINH.02' }
+            { id: 'minh', code: 'HNIKDMINH.02' },
+            { id: 'nghia', code: 'HCMKDNGHIA.02' }
         ];
 
-        const tbody = document.querySelector('#tab-sales tbody');
+        const tbody = document.getElementById('repSummaryTableBody');
         if (tbody) {
             repRows.forEach((item, idx) => {
                 const tr = tbody.children[idx];
@@ -2177,6 +2209,22 @@ window.__errors = [];
                 }
             });
         }
+
+        // Cập nhật Dòng Tổng theo Thương hiệu ở chân bảng
+        const br = sDet.brands || {};
+        const elTotCity = document.getElementById('rep_tot_city');
+        const elTotMia = document.getElementById('rep_tot_mia');
+        const elTotEdu = document.getElementById('rep_tot_edu');
+        const elTotFee = document.getElementById('rep_tot_fee');
+        const elTotAll = document.getElementById('rep_tot_all');
+        const elTotSos = document.getElementById('rep_tot_sos');
+
+        if (elTotCity) elTotCity.textContent = formatMoneyVND(br['THE CITY'] || 0);
+        if (elTotMia) elTotMia.textContent = formatMoneyVND(br['THE MIA'] || 0);
+        if (elTotEdu) elTotEdu.textContent = formatMoneyVND(br['RPB EDU & PUBLIC'] || 0);
+        if (elTotFee) elTotFee.textContent = formatMoneyVND(br['Phí vận chuyển / Khác'] || 0);
+        if (elTotAll) elTotAll.textContent = formatMoneyVND(sDet.total_rev || 0);
+        if (elTotSos) elTotSos.textContent = sDet.so_count || 0;
     }
 
     function updateChartsPeriod(pData) {
