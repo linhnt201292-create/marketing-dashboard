@@ -1749,7 +1749,6 @@ window.__errors = [];
     // Global State Variables - declared at top to avoid Temporal Dead Zone (TDZ)
     var currentPeriod = 'all';
     var currentFbBrand = 'ALL';
-    var formatVND = formatMoneyVND;
     var currentPeriodFbCampaigns = [];
     var currentPeriodGgCampaigns = [];
 
@@ -1775,10 +1774,12 @@ window.__errors = [];
     };
 
     function formatMoneyVND(val) {
-    const formatVND = formatMoneyVND;
-        if (typeof val !== 'number' || isNaN(val)) return '0 đ';
-        return new Intl.NumberFormat('vi-VN').format(Math.round(val)) + ' đ';
+        if (val === null || val === undefined || val === '') return '0 đ';
+        const num = typeof val === 'number' ? val : parseFloat(String(val).replace(/[^0-9.-]+/g, ''));
+        if (isNaN(num)) return '0 đ';
+        return new Intl.NumberFormat('vi-VN').format(Math.round(num)) + ' đ';
     }
+    var formatVND = formatMoneyVND;
 
     function setPeriod(p) {
         currentPeriod = p;
@@ -2029,6 +2030,7 @@ window.__errors = [];
     }
 
     function updateSalesTabValues(sDet) {
+        if (!sDet || !sDet.regions) return;
         const hcmVal = sDet.regions.HCM || 0;
         const hnVal = sDet.regions.HN || 0;
         const tot = sDet.total_rev || 1;
@@ -2045,20 +2047,20 @@ window.__errors = [];
         if (elHn) elHn.textContent = formatMoneyVND(hnVal);
         if (elHnBadge) elHnBadge.textContent = hnRate + '% Tổng DS';
 
-        const reps = sDet.reps;
-        const rb = sDet.rep_brand;
+        const reps = sDet.reps || {};
+        const rb = sDet.rep_brand || {};
         const repRows = [
-            { id: 'dao', code: 'HNIKDDAO.01' },
             { id: 'khoa', code: 'HCMKDKHOA.02' },
             { id: 'yen', code: 'HNIKDYEN.01' },
-            { id: 'minh', code: 'HNIKDMINH.02' },
-            { id: 'nghia', code: 'HCMKDNGHIA.02' }
+            { id: 'dao', code: 'HNIKDDAO.01' },
+            { id: 'minh', code: 'HNIKDMINH.02' }
         ];
 
         const tbody = document.querySelector('#tab-sales tbody');
-        if (tbody && tbody.children.length >= 4) {
+        if (tbody) {
             repRows.forEach((item, idx) => {
                 const tr = tbody.children[idx];
+                if (!tr) return;
                 const rData = reps[item.code] || { rev: 0, sos: 0 };
                 const rBrand = rb[item.code] || {};
                 const tds = tr.querySelectorAll('td');
@@ -2067,8 +2069,8 @@ window.__errors = [];
                     tds[3].textContent = formatMoneyVND(rBrand['THE MIA'] || 0);
                     tds[4].textContent = formatMoneyVND(rBrand['RPB EDU & PUBLIC'] || 0);
                     tds[5].textContent = formatMoneyVND(rBrand['Phí vận chuyển / Khác'] || 0);
-                    tds[6].textContent = formatMoneyVND(rData.rev);
-                    tds[7].textContent = rData.sos;
+                    tds[6].textContent = formatMoneyVND(rData.rev || 0);
+                    tds[7].textContent = rData.sos || 0;
                 }
             });
         }
@@ -2109,6 +2111,7 @@ window.__errors = [];
         var chatbotChartsInitialized = false;
         function initChatbotCharts() {
             if (chatbotChartsInitialized) return;
+            if (typeof Chart === 'undefined') return;
             const ctxDoughnut = document.getElementById('chatbotPlatformDoughnut');
             if (ctxDoughnut) {
                 new Chart(ctxDoughnut, {
@@ -2264,8 +2267,8 @@ window.__errors = [];
                 return;
             }
 
-            const cityCamps = camps.filter(c => c.brand === 'The City');
-            const miaCamps = camps.filter(c => c.brand === 'The Mia');
+            const cityCamps = camps.filter(c => (c.brand || '').toLowerCase().includes('city'));
+            const miaCamps = camps.filter(c => (c.brand || '').toLowerCase().includes('mia'));
 
             const renderSubHeader = (title, totalSpend) => {
                 const tr = document.createElement('tr');
@@ -2324,20 +2327,21 @@ window.__errors = [];
                 activeBtn.classList.add('bg-orange-600', 'text-white');
             }
 
-            let filtered = currentPeriodFbCampaigns;
+            let base = (currentPeriodFbCampaigns && currentPeriodFbCampaigns.length > 0) ? currentPeriodFbCampaigns : (weeklyBundle[currentPeriod]?.fb_detail?.campaigns || []);
+            let filtered = base;
             if (brand !== 'ALL') {
-                filtered = currentPeriodFbCampaigns.filter(c => c.brand === brand);
+                filtered = base.filter(c => (c.brand || '').toUpperCase().trim() === brand.toUpperCase().trim());
             }
             renderCampaignsTable(filtered);
         }
 
         function searchCampaigns() {
-            const q = (document.getElementById('campaignSearch')?.value || '').toLowerCase();
-            let base = currentPeriodFbCampaigns;
+            const q = (document.getElementById('campaignSearch')?.value || '').toLowerCase().trim();
+            let base = (currentPeriodFbCampaigns && currentPeriodFbCampaigns.length > 0) ? currentPeriodFbCampaigns : (weeklyBundle[currentPeriod]?.fb_detail?.campaigns || []);
             if (currentFbBrand !== 'ALL') {
-                base = base.filter(c => c.brand === currentFbBrand);
+                base = base.filter(c => (c.brand || '').toUpperCase().trim() === currentFbBrand.toUpperCase().trim());
             }
-            const filtered = base.filter(c => (c.name || '').toLowerCase().includes(q));
+            const filtered = q ? base.filter(c => (c.name || '').toLowerCase().includes(q)) : base;
             renderCampaignsTable(filtered);
         }
 
@@ -2347,8 +2351,11 @@ window.__errors = [];
         window.addEventListener('DOMContentLoaded', () => {
             setPeriod('all');
 
+            if (typeof Chart === 'undefined') return;
             // Chart 1: Bar Chart (Doanh số vs Tổng Chi Ads)
-            const ctx1 = document.getElementById('chartBrandComparison').getContext('2d');
+            const elCtx1 = document.getElementById('chartBrandComparison');
+            if (!elCtx1) return;
+            const ctx1 = elCtx1.getContext('2d');
             window.chartBrandComparisonInstance = window.chartBrandComparisonInstance = new Chart(ctx1, {
                 type: 'bar',
                 data: {
@@ -2401,9 +2408,10 @@ window.__errors = [];
                     }
                 }
             });
+        }); // Close DOMContentLoaded
 
         function recalcKpiRow(brand) {
-            const rowData = kpiBaseData[brand];
+            const rowData = kpiBaseData ? kpiBaseData[brand] : null;
             if (!rowData) return;
 
             const inputCu = document.getElementById(`input_${brand}_ds_cu`);
@@ -2417,7 +2425,7 @@ window.__errors = [];
             const eng = (inputEng && inputEng.value) ? parseFloat(inputEng.value.replace(',', '.')) : null;
 
             // Recalculate Doanh số
-            const dsTong = rowData.ds_moi + dsCu;
+            const dsTong = (rowData.ds_moi || 0) + dsCu;
             const dsThieu = Math.max(0, rowData.kpi_ds - dsTong);
             const rateHt = (dsTong / rowData.kpi_ds) * 100;
 
@@ -2425,116 +2433,41 @@ window.__errors = [];
             const elDsThieu = document.getElementById(`val_${brand}_ds_thieu`);
             const elRateHt = document.getElementById(`val_${brand}_rate_ht`);
 
-            if (elDsTong) elDsTong.textContent = formatVND(dsTong);
-            if (elDsThieu) elDsThieu.textContent = formatVND(dsThieu);
+            if (elDsTong) elDsTong.textContent = formatMoneyVND(dsTong);
+            if (elDsThieu) elDsThieu.textContent = formatMoneyVND(dsThieu);
             if (elRateHt) {
                 const badgeColor = rateHt >= 60 ? 'bg-emerald-100 text-emerald-800' : (rateHt >= 40 ? 'bg-blue-100 text-blue-800' : 'bg-rose-100 text-rose-800');
-                elRateHt.innerHTML = `<span class="px-2 py-0.5 rounded ${badgeColor}">${rateHt.toFixed(2).replace('.', ',')}%</span>`;
+                elRateHt.innerHTML = `<span class="px-2.5 py-1 rounded ${badgeColor} text-[11px] font-extrabold">${rateHt.toFixed(2).replace('.', ',')}%</span>`;
             }
 
-            // Recalculate Qualified Lead
-            const elQLeadThieu = document.getElementById(`val_${brand}_qlead_thieu`);
-            if (elQLeadThieu) {
-                if (qLead !== null) {
-                    elQLeadThieu.textContent = Math.max(0, rowData.kpi_qlead - qLead);
-                } else {
-                    elQLeadThieu.textContent = rowData.kpi_qlead;
-                }
-            }
-
-            // Recalculate FL
-            const elRateFl = document.getElementById(`val_${brand}_rate_fl`);
-            if (elRateFl) {
-                if (fl !== null) {
-                    const rFl = (fl / rowData.kpi_fl) * 100;
-                    elRateFl.textContent = rFl.toFixed(2).replace('.', ',') + '%';
-                } else {
-                    elRateFl.textContent = '0,00%';
-                }
-            }
-
-            // Recalculate Eng
-            const elRateEng = document.getElementById(`val_${brand}_rate_eng`);
-            if (elRateEng) {
-                if (eng !== null) {
-                    const rEng = (eng / rowData.kpi_eng) * 100;
-                    elRateEng.textContent = Math.round(rEng) + '%';
-                } else {
-                    elRateEng.textContent = '0%';
-                }
-            }
-
-            // Save to localStorage
-            const savedState = {
-                cu: inputCu?.value || '',
-                qlead: inputQLead?.value || '',
-                fl: inputFl?.value || '',
-                eng: inputEng?.value || ''
-            };
-            localStorage.setItem(`kpi_row_${brand}`, JSON.stringify(savedState));
-
-            recalcKpiTotal();
-        }
-
-        function recalcKpiTotal() {
-            let totalDsCu = 0;
-            let totalDsMoi = kpiBaseData.city.ds_moi + kpiBaseData.mia.ds_moi + kpiBaseData.edu.ds_moi + kpiBaseData.fee.ds_moi;
-            let totalKpiDs = kpiBaseData.city.kpi_ds + kpiBaseData.mia.kpi_ds + kpiBaseData.edu.kpi_ds;
-            let totalKpiQLead = kpiBaseData.city.kpi_qlead + kpiBaseData.mia.kpi_qlead + kpiBaseData.edu.kpi_qlead;
-            let totalQLead = 0;
-            let hasQLead = false;
-            let totalFl = 0;
-            let hasFl = false;
-
-            ['city', 'mia', 'edu'].forEach(b => {
-                const cu = parseFloat(document.getElementById(`input_${b}_ds_cu`)?.value) || 0;
-                totalDsCu += cu;
-
-                const qlVal = document.getElementById(`input_${b}_qlead`)?.value;
-                if (qlVal !== '' && qlVal !== undefined && qlVal !== null) {
-                    totalQLead += parseInt(qlVal) || 0;
-                    hasQLead = true;
-                }
-
-                const flVal = document.getElementById(`input_${b}_fl`)?.value;
-                if (flVal !== '' && flVal !== undefined && flVal !== null) {
-                    totalFl += parseInt(flVal) || 0;
-                    hasFl = true;
+            // Update Total row of KPI table
+            const allBrands = ['city', 'mia', 'edu'];
+            let totDsMoi = 0;
+            let totDsTong = 0;
+            const totKpiDs = 3250000000;
+            allBrands.forEach(b => {
+                const bData = kpiBaseData[b];
+                const bCu = parseFloat(document.getElementById(`input_${b}_ds_cu`)?.value) || 0;
+                if (bData) {
+                    totDsMoi += (bData.ds_moi || 0);
+                    totDsTong += ((bData.ds_moi || 0) + bCu);
                 }
             });
+            const totFee = (kpiBaseData.fee && kpiBaseData.fee.ds_moi) ? kpiBaseData.fee.ds_moi : 34215311;
+            totDsMoi += totFee;
+            totDsTong += totFee;
 
-            const totalDsTong = totalDsMoi + totalDsCu;
-            const totalDsThieu = Math.max(0, totalKpiDs - totalDsTong);
-            const totalRateHt = (totalDsTong / totalKpiDs) * 100;
-
-            const elTotCu = document.getElementById('val_total_ds_cu');
             const elTotMoi = document.getElementById('val_total_ds_moi');
             const elTotTong = document.getElementById('val_total_ds_tong');
             const elTotThieu = document.getElementById('val_total_ds_thieu');
-            const elTotRateHt = document.getElementById('val_total_rate_ht');
+            const elTotRate = document.getElementById('val_total_rate_ht');
 
-            if (elTotCu) elTotCu.textContent = formatVND(totalDsCu);
-            if (elTotMoi) elTotMoi.textContent = formatVND(totalDsMoi);
-            if (elTotTong) elTotTong.textContent = formatVND(totalDsTong);
-            if (elTotThieu) elTotThieu.textContent = formatVND(totalDsThieu);
-            if (elTotRateHt) {
-                elTotRateHt.innerHTML = `<span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 text-[11px] font-extrabold">${totalRateHt.toFixed(2).replace('.', ',')}%</span>`;
-            }
-
-            const elTotQLead = document.getElementById('val_total_qlead');
-            const elTotQLeadThieu = document.getElementById('val_total_qlead_thieu');
-            if (elTotQLead) elTotQLead.textContent = hasQLead ? totalQLead : '--';
-            if (elTotQLeadThieu) elTotQLeadThieu.textContent = hasQLead ? Math.max(0, totalKpiQLead - totalQLead) : totalKpiQLead;
-
-            const elTotFl = document.getElementById('val_total_fl');
-            const elTotRateFl = document.getElementById('val_total_rate_fl');
-            if (elTotFl) elTotFl.textContent = hasFl ? totalFl : '--';
-            if (elTotRateFl) {
-                if (hasFl) {
-                    elTotRateFl.textContent = ((totalFl / 2430) * 100).toFixed(2).replace('.', ',') + '%';
-                } else {
-                    elTotRateFl.textContent = '0,00%';
-                }
+            if (elTotMoi) elTotMoi.textContent = formatMoneyVND(totDsMoi);
+            if (elTotTong) elTotTong.textContent = formatMoneyVND(totDsTong);
+            if (elTotThieu) elTotThieu.textContent = formatMoneyVND(Math.max(0, totKpiDs - totDsTong));
+            if (elTotRate) {
+                const totRate = (totDsTong / totKpiDs * 100);
+                elTotRate.innerHTML = `<span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 text-[11px] font-extrabold">${totRate.toFixed(2).replace('.', ',')}%</span>`;
             }
         }
 
@@ -2561,11 +2494,26 @@ window.__errors = [];
             ['city', 'mia', 'edu'].forEach(b => recalcKpiRow(b));
         }
 
-        // Initialize table on DOMContentLoaded
-        setTimeout(loadKpiSavedData, 100);
+        // Attach global functions to window
+        window.recalcKpiRow = recalcKpiRow;
+        window.loadKpiSavedData = loadKpiSavedData;
+        window.fillSampleKpiData = fillSampleKpiData;
+        window.filterCampaigns = filterCampaigns;
+        window.searchCampaigns = searchCampaigns;
+        window.renderCampaignsTable = renderCampaignsTable;
+        window.renderGoogleCampaignsTable = renderGoogleCampaignsTable;
+        window.switchTab = switchTab;
+        window.setPeriod = setPeriod;
+        window.formatMoneyVND = formatMoneyVND;
+        window.formatVND = formatMoneyVND;
 
-        });
-
+        // Initialize table on load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => setTimeout(loadKpiSavedData, 100));
+        } else {
+            setTimeout(loadKpiSavedData, 100);
+        }
+    
 </script>
 </body>
 </html>
