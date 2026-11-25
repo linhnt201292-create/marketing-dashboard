@@ -1,42 +1,42 @@
 {
   "all": {
-    "revenue": 1358840656.0,
+    "revenue": 1441130680.0,
     "kpi_target": 3250000000.0,
-    "progress": 41.810481723076926,
-    "ads_spend": 89349969.0,
-    "fb_spend": 30142107.0,
-    "gg_spend": 59207862.0,
-    "cir": 6.575455967222695,
-    "roas": 15.20807081645434,
-    "leads": 2431,
-    "fb_leads": 644,
-    "gg_leads": 1787,
+    "progress": 44.34248246153846,
+    "ads_spend": 110298398.0,
+    "fb_spend": 40141072.0,
+    "gg_spend": 70157326.0,
+    "cir": 7.653601406917518,
+    "roas": 13.065744436288186,
+    "leads": 3018,
+    "fb_leads": 1002,
+    "gg_leads": 2016,
     "sales_detail": {
-      "total_rev": 1358840656.0,
-      "so_count": 40,
-      "rows_count": 130,
+      "total_rev": 1441130680.0,
+      "so_count": 48,
+      "rows_count": 142,
       "brands": {
-        "THE CITY": 777215830.0,
-        "THE MIA": 411227950.0,
-        "RPB EDU & PUBLIC": 97344955.0,
-        "Phí vận chuyển / Khác": 73051921.0
+        "THE CITY": 1050366900.0,
+        "THE MIA": 218443708.0,
+        "RPB EDU & PUBLIC": 98379955.0,
+        "Phí vận chuyển / Khác": 73940117.0
       },
       "regions": {
-        "HCM": 286447506.0,
-        "HN": 1072393150.0
+        "HCM": 361402910.0,
+        "HN": 1079727770.0
       },
       "reps": {
         "HCMKDKHOA.02": {
-          "rev": 286447506.0,
-          "sos": 31,
+          "rev": 358645502.0,
+          "sos": 36,
           "name": "Lê Minh Khoa",
           "reg": "HCM"
         },
-        "HNIKDYEN.01": {
-          "rev": 87548900.0,
-          "sos": 5,
-          "name": "Vũ Hoàng Yến",
-          "reg": "HN"
+        "HCMKDNGHIA.02": {
+          "rev": 2757408.0,
+          "sos": 1,
+          "name": "Phạm Trọng Nghĩa",
+          "reg": "HCM"
         },
         "HNIKDDAO.01": {
           "rev": 978224450.0,
@@ -45,84 +45,94 @@
           "reg": "HN"
         },
         "HNIKDMINH.02": {
-          "rev": 6619800.0,
-          "sos": 1,
+          "rev": 12669420.0,
+          "sos": 2,
           "name": "Nguyễn Đức Minh",
+          "reg": "HN"
+        },
+        "HNIKDYEN.01": {
+          "rev": 88833900.0,
+          "sos": 6,
+          "name": "Vũ Hoàng Yến",
           "reg": "HN"
         }
       },
       "rep_brand": {
         "HCMKDKHOA.02": {
-          "THE CITY": 164219830.0,
-          "Phí vận chuyển / Khác": 8051921.0,
-          "THE MIA": 104379700.0,
-          "RPB EDU & PUBLIC": 9796055.0
+          "RPB EDU & PUBLIC": 9796055.0,
+          "Phí vận chuyển / Khác": 8690117.0,
+          "THE MIA": 136289500.0,
+          "THE CITY": 203869830.0
         },
         "HNIKDYEN.01": {
-          "RPB EDU & PUBLIC": 87548900.0
+          "RPB EDU & PUBLIC": 88583900.0,
+          "Phí vận chuyển / Khác": 250000.0
         },
         "HNIKDDAO.01": {
-          "THE CITY": 612996000.0,
-          "THE MIA": 300228450.0,
-          "RPB EDU & PUBLIC": 0.0,
+          "THE CITY": 840447450.0,
+          "THE MIA": 72777000.0,
           "Phí vận chuyển / Khác": 65000000.0
         },
         "HNIKDMINH.02": {
-          "THE MIA": 6619800.0
+          "THE MIA": 6619800.0,
+          "THE CITY": 6049620.0
+        },
+        "HCMKDNGHIA.02": {
+          "THE MIA": 2757408.0
         }
       }
     },
     "fb_detail": {
-      "spend": 30142107.0,
-      "conv": 644,
+      "spend": 40141072.0,
+      "conv": 1002,
       "brands": {
-        "THE CITY": 5861932.0,
-        "THE MIA": 9133852.0,
-        "RPB EDU & PUBLIC": 15049054.0,
+        "THE CITY": 7816589.0,
+        "THE MIA": 12185429.0,
+        "RPB EDU & PUBLIC": 20041785.0,
         "Khác": 97269.0
       },
       "conv_brand": {
-        "THE CITY": 103,
-        "THE MIA": 104,
-        "RPB EDU & PUBLIC": 436,
-        "Khác": 1
+        "THE CITY": 160,
+        "THE MIA": 165,
+        "RPB EDU & PUBLIC": 675,
+        "Khác": 2
       }
     },
     "gg_detail": {
-      "spend": 59207862.0,
-      "conv": 1787,
+      "spend": 70157326.0,
+      "conv": 2016,
       "brands": {
-        "THE CITY": 47659730.0,
-        "THE MIA": 11548132.0,
+        "THE CITY": 50744626.0,
+        "THE MIA": 19412700.0,
         "RPB EDU & PUBLIC": 0.0
       }
     }
   },
   "w1": {
-    "revenue": 123375980.0,
-    "kpi_target": 866666666.6666666,
-    "progress": 14.235690000000002,
-    "ads_spend": 41452485.0,
-    "fb_spend": 15137880.0,
+    "revenue": 123625980.0,
+    "kpi_target": 758333333.3333333,
+    "progress": 16.302327032967035,
+    "ads_spend": 39496165.0,
+    "fb_spend": 13181560.0,
     "gg_spend": 26314605.0,
-    "cir": 33.59850515473109,
-    "roas": 2.9763228911366832,
-    "leads": 1149,
-    "fb_leads": 355,
+    "cir": 31.948110745006836,
+    "roas": 3.13007554024549,
+    "leads": 1104,
+    "fb_leads": 310,
     "gg_leads": 794,
     "sales_detail": {
-      "total_rev": 123375980.0,
+      "total_rev": 123625980.0,
       "so_count": 11,
-      "rows_count": 24,
+      "rows_count": 25,
       "brands": {
         "THE CITY": 28443200.0,
         "THE MIA": 10548000.0,
         "RPB EDU & PUBLIC": 82820000.0,
-        "Phí vận chuyển / Khác": 1564780.0
+        "Phí vận chuyển / Khác": 1814780.0
       },
       "regions": {
         "HCM": 41845980.0,
-        "HN": 81530000.0
+        "HN": 81780000.0
       },
       "reps": {
         "HCMKDKHOA.02": {
@@ -131,11 +141,11 @@
           "name": "Lê Minh Khoa",
           "reg": "HCM"
         },
-        "HNIKDYEN.01": {
-          "rev": 81530000.0,
-          "sos": 2,
-          "name": "Vũ Hoàng Yến",
-          "reg": "HN"
+        "HCMKDNGHIA.02": {
+          "rev": 0.0,
+          "sos": 0,
+          "name": "Phạm Trọng Nghĩa",
+          "reg": "HCM"
         },
         "HNIKDDAO.01": {
           "rev": 0.0,
@@ -148,33 +158,40 @@
           "sos": 0,
           "name": "Nguyễn Đức Minh",
           "reg": "HN"
+        },
+        "HNIKDYEN.01": {
+          "rev": 81780000.0,
+          "sos": 2,
+          "name": "Vũ Hoàng Yến",
+          "reg": "HN"
         }
       },
       "rep_brand": {
         "HCMKDKHOA.02": {
-          "THE MIA": 10548000.0,
+          "RPB EDU & PUBLIC": 1290000.0,
           "Phí vận chuyển / Khác": 1564780.0,
-          "THE CITY": 28443200.0,
-          "RPB EDU & PUBLIC": 1290000.0
+          "THE MIA": 10548000.0,
+          "THE CITY": 28443200.0
         },
         "HNIKDYEN.01": {
+          "Phí vận chuyển / Khác": 250000.0,
           "RPB EDU & PUBLIC": 81530000.0
         }
       }
     },
     "fb_detail": {
-      "spend": 15137880.0,
-      "conv": 355,
+      "spend": 13181560.0,
+      "conv": 310,
       "brands": {
-        "THE CITY": 3114778.0,
-        "THE MIA": 4576789.0,
-        "RPB EDU & PUBLIC": 7446313.0,
+        "THE CITY": 2714778.0,
+        "THE MIA": 3986789.0,
+        "RPB EDU & PUBLIC": 6479993.0,
         "Khác": 0.0
       },
       "conv_brand": {
-        "THE CITY": 65,
-        "THE MIA": 52,
-        "RPB EDU & PUBLIC": 238,
+        "THE CITY": 57,
+        "THE MIA": 45,
+        "RPB EDU & PUBLIC": 208,
         "Khác": 0
       }
     },
@@ -190,15 +207,15 @@
   },
   "w2": {
     "revenue": 102812715.0,
-    "kpi_target": 758333333.3333333,
-    "progress": 13.55772065934066,
-    "ads_spend": 33703129.0,
-    "fb_spend": 10677849.0,
+    "kpi_target": 866666666.6666666,
+    "progress": 11.863005576923078,
+    "ads_spend": 35659449.0,
+    "fb_spend": 12634169.0,
     "gg_spend": 23025280.0,
-    "cir": 32.78109035443719,
-    "roas": 3.0505391650727742,
-    "leads": 905,
-    "fb_leads": 210,
+    "cir": 34.6838900227467,
+    "roas": 2.883182939814914,
+    "leads": 1003,
+    "fb_leads": 308,
     "gg_leads": 695,
     "sales_detail": {
       "total_rev": 102812715.0,
@@ -221,11 +238,11 @@
           "name": "Lê Minh Khoa",
           "reg": "HCM"
         },
-        "HNIKDYEN.01": {
-          "rev": 5344000.0,
-          "sos": 2,
-          "name": "Vũ Hoàng Yến",
-          "reg": "HN"
+        "HCMKDNGHIA.02": {
+          "rev": 0.0,
+          "sos": 0,
+          "name": "Phạm Trọng Nghĩa",
+          "reg": "HCM"
         },
         "HNIKDDAO.01": {
           "rev": 0.0,
@@ -238,36 +255,42 @@
           "sos": 1,
           "name": "Nguyễn Đức Minh",
           "reg": "HN"
+        },
+        "HNIKDYEN.01": {
+          "rev": 5344000.0,
+          "sos": 2,
+          "name": "Vũ Hoàng Yến",
+          "reg": "HN"
         }
       },
       "rep_brand": {
         "HCMKDKHOA.02": {
-          "THE CITY": 58931600.0,
           "Phí vận chuyển / Khác": 3540760.0,
+          "THE CITY": 58931600.0,
           "THE MIA": 19870500.0,
           "RPB EDU & PUBLIC": 8506055.0
         },
-        "HNIKDYEN.01": {
-          "RPB EDU & PUBLIC": 5344000.0
-        },
         "HNIKDMINH.02": {
           "THE MIA": 6619800.0
+        },
+        "HNIKDYEN.01": {
+          "RPB EDU & PUBLIC": 5344000.0
         }
       }
     },
     "fb_detail": {
-      "spend": 10677849.0,
-      "conv": 210,
+      "spend": 12634169.0,
+      "conv": 308,
       "brands": {
-        "THE CITY": 1991355.0,
-        "THE MIA": 3245942.0,
-        "RPB EDU & PUBLIC": 5440552.0,
+        "THE CITY": 2355535.0,
+        "THE MIA": 3840733.0,
+        "RPB EDU & PUBLIC": 6437901.0,
         "Khác": 0.0
       },
       "conv_brand": {
-        "THE CITY": 31,
-        "THE MIA": 33,
-        "RPB EDU & PUBLIC": 146,
+        "THE CITY": 37,
+        "THE MIA": 39,
+        "RPB EDU & PUBLIC": 232,
         "Khác": 0
       }
     },
@@ -282,43 +305,43 @@
     }
   },
   "w3": {
-    "revenue": 1132651961.0,
+    "revenue": 1205233321.0,
     "kpi_target": 758333333.3333333,
-    "progress": 149.36069815384616,
-    "ads_spend": 14194355.0,
-    "fb_spend": 4326378.0,
-    "gg_spend": 9867977.0,
-    "cir": 1.2531965236230231,
-    "roas": 79.79594430321067,
-    "leads": 377,
-    "fb_leads": 79,
-    "gg_leads": 298,
+    "progress": 158.93186650549453,
+    "ads_spend": 26688251.0,
+    "fb_spend": 10250809.0,
+    "gg_spend": 16437442.0,
+    "cir": 2.2143638526236864,
+    "roas": 45.15969671448309,
+    "leads": 672,
+    "fb_leads": 274,
+    "gg_leads": 398,
     "sales_detail": {
-      "total_rev": 1132651961.0,
-      "so_count": 10,
-      "rows_count": 69,
+      "total_rev": 1205233321.0,
+      "so_count": 17,
+      "rows_count": 78,
       "brands": {
-        "THE CITY": 689841030.0,
-        "THE MIA": 374189650.0,
-        "RPB EDU & PUBLIC": 674900.0,
-        "Phí vận chuyển / Khác": 67946381.0
+        "THE CITY": 962992100.0,
+        "THE MIA": 172132208.0,
+        "RPB EDU & PUBLIC": 1709900.0,
+        "Phí vận chuyển / Khác": 68399113.0
       },
       "regions": {
-        "HCM": 153752611.0,
-        "HN": 978899350.0
+        "HCM": 219249351.0,
+        "HN": 985983970.0
       },
       "reps": {
         "HCMKDKHOA.02": {
-          "rev": 153752611.0,
-          "sos": 6,
+          "rev": 216491943.0,
+          "sos": 10,
           "name": "Lê Minh Khoa",
           "reg": "HCM"
         },
-        "HNIKDYEN.01": {
-          "rev": 674900.0,
+        "HCMKDNGHIA.02": {
+          "rev": 2757408.0,
           "sos": 1,
-          "name": "Vũ Hoàng Yến",
-          "reg": "HN"
+          "name": "Phạm Trọng Nghĩa",
+          "reg": "HCM"
         },
         "HNIKDDAO.01": {
           "rev": 978224450.0,
@@ -327,93 +350,104 @@
           "reg": "HN"
         },
         "HNIKDMINH.02": {
-          "rev": 0.0,
-          "sos": 0,
+          "rev": 6049620.0,
+          "sos": 1,
           "name": "Nguyễn Đức Minh",
+          "reg": "HN"
+        },
+        "HNIKDYEN.01": {
+          "rev": 1709900.0,
+          "sos": 2,
+          "name": "Vũ Hoàng Yến",
           "reg": "HN"
         }
       },
       "rep_brand": {
         "HNIKDYEN.01": {
-          "RPB EDU & PUBLIC": 674900.0
-        },
-        "HNIKDDAO.01": {
-          "THE CITY": 612996000.0,
-          "THE MIA": 300228450.0,
-          "RPB EDU & PUBLIC": 0.0,
-          "Phí vận chuyển / Khác": 65000000.0
+          "RPB EDU & PUBLIC": 1709900.0
         },
         "HCMKDKHOA.02": {
-          "THE MIA": 73961200.0,
-          "THE CITY": 76845030.0,
-          "Phí vận chuyển / Khác": 2946381.0
+          "THE MIA": 96597800.0,
+          "Phí vận chuyển / Khác": 3399113.0,
+          "THE CITY": 116495030.0
+        },
+        "HNIKDDAO.01": {
+          "THE CITY": 840447450.0,
+          "THE MIA": 72777000.0,
+          "Phí vận chuyển / Khác": 65000000.0
+        },
+        "HCMKDNGHIA.02": {
+          "THE MIA": 2757408.0
+        },
+        "HNIKDMINH.02": {
+          "THE CITY": 6049620.0
         }
       }
     },
     "fb_detail": {
-      "spend": 4326378.0,
-      "conv": 79,
+      "spend": 10250809.0,
+      "conv": 274,
       "brands": {
-        "THE CITY": 755799.0,
-        "THE MIA": 1311121.0,
-        "RPB EDU & PUBLIC": 2162189.0,
+        "THE CITY": 1789880.0,
+        "THE MIA": 3110250.0,
+        "RPB EDU & PUBLIC": 5253410.0,
         "Khác": 97269.0
       },
       "conv_brand": {
-        "THE CITY": 7,
-        "THE MIA": 19,
-        "RPB EDU & PUBLIC": 52,
-        "Khác": 1
+        "THE CITY": 45,
+        "THE MIA": 59,
+        "RPB EDU & PUBLIC": 168,
+        "Khác": 2
       }
     },
     "gg_detail": {
-      "spend": 9867977.0,
-      "conv": 298,
+      "spend": 16437442.0,
+      "conv": 398,
       "brands": {
-        "THE CITY": 7943288.0,
-        "THE MIA": 1924689.0,
+        "THE CITY": 9793288.0,
+        "THE MIA": 6644154.0,
         "RPB EDU & PUBLIC": 0.0
       }
     }
   },
   "w4": {
-    "revenue": 0.0,
+    "revenue": 9458664.0,
     "kpi_target": 866666666.6666666,
-    "progress": 0.0,
-    "ads_spend": 0.0,
-    "fb_spend": 0.0,
-    "gg_spend": 0.0,
-    "cir": 0.0,
-    "roas": 0.0,
-    "leads": 0,
-    "fb_leads": 0,
-    "gg_leads": 0,
+    "progress": 1.0913843076923078,
+    "ads_spend": 8454533.0,
+    "fb_spend": 4074534.0,
+    "gg_spend": 4379999.0,
+    "cir": 89.38400814322192,
+    "roas": 1.1187683577555378,
+    "leads": 239,
+    "fb_leads": 110,
+    "gg_leads": 129,
     "sales_detail": {
-      "total_rev": 0.0,
-      "so_count": 0,
-      "rows_count": 0,
+      "total_rev": 9458664.0,
+      "so_count": 1,
+      "rows_count": 2,
       "brands": {
         "THE CITY": 0.0,
-        "THE MIA": 0.0,
+        "THE MIA": 9273200.0,
         "RPB EDU & PUBLIC": 0.0,
-        "Phí vận chuyển / Khác": 0.0
+        "Phí vận chuyển / Khác": 185464.0
       },
       "regions": {
-        "HCM": 0.0,
+        "HCM": 9458664.0,
         "HN": 0.0
       },
       "reps": {
         "HCMKDKHOA.02": {
-          "rev": 0.0,
-          "sos": 0,
+          "rev": 9458664.0,
+          "sos": 1,
           "name": "Lê Minh Khoa",
           "reg": "HCM"
         },
-        "HNIKDYEN.01": {
+        "HCMKDNGHIA.02": {
           "rev": 0.0,
           "sos": 0,
-          "name": "Vũ Hoàng Yến",
-          "reg": "HN"
+          "name": "Phạm Trọng Nghĩa",
+          "reg": "HCM"
         },
         "HNIKDDAO.01": {
           "rev": 0.0,
@@ -426,32 +460,43 @@
           "sos": 0,
           "name": "Nguyễn Đức Minh",
           "reg": "HN"
+        },
+        "HNIKDYEN.01": {
+          "rev": 0.0,
+          "sos": 0,
+          "name": "Vũ Hoàng Yến",
+          "reg": "HN"
         }
       },
-      "rep_brand": {}
+      "rep_brand": {
+        "HCMKDKHOA.02": {
+          "THE MIA": 9273200.0,
+          "Phí vận chuyển / Khác": 185464.0
+        }
+      }
     },
     "fb_detail": {
-      "spend": 0.0,
-      "conv": 0,
+      "spend": 4074534.0,
+      "conv": 110,
       "brands": {
-        "THE CITY": 0.0,
-        "THE MIA": 0.0,
-        "RPB EDU & PUBLIC": 0.0,
+        "THE CITY": 956396.0,
+        "THE MIA": 1247657.0,
+        "RPB EDU & PUBLIC": 1870481.0,
         "Khác": 0.0
       },
       "conv_brand": {
-        "THE CITY": 0,
-        "THE MIA": 0,
-        "RPB EDU & PUBLIC": 0,
+        "THE CITY": 21,
+        "THE MIA": 22,
+        "RPB EDU & PUBLIC": 67,
         "Khác": 0
       }
     },
     "gg_detail": {
-      "spend": 0.0,
-      "conv": 0,
+      "spend": 4379999.0,
+      "conv": 129,
       "brands": {
-        "THE CITY": 0.0,
-        "THE MIA": 0.0,
+        "THE CITY": 1234896.0,
+        "THE MIA": 3145103.0,
         "RPB EDU & PUBLIC": 0.0
       }
     }
