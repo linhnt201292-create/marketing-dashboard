@@ -1,29 +1,29 @@
 {
   "all": {
-    "revenue": 1441130680.0,
+    "revenue": 501168230.0,
     "kpi_target": 3250000000.0,
-    "progress": 44.34248246153846,
+    "progress": 15.420560923076923,
     "ads_spend": 110298398.0,
     "fb_spend": 40141072.0,
     "gg_spend": 70157326.0,
-    "cir": 7.653601406917518,
-    "roas": 13.065744436288186,
+    "cir": 22.008258185080887,
+    "roas": 4.543748949100784,
     "leads": 3018,
     "fb_leads": 1002,
     "gg_leads": 2016,
     "sales_detail": {
-      "total_rev": 1441130680.0,
-      "so_count": 48,
-      "rows_count": 142,
+      "total_rev": 501168230.0,
+      "so_count": 46,
+      "rows_count": 93,
       "brands": {
-        "THE CITY": 1050366900.0,
-        "THE MIA": 218443708.0,
+        "THE CITY": 248181450.0,
+        "THE MIA": 145666708.0,
         "RPB EDU & PUBLIC": 98379955.0,
-        "Phí vận chuyển / Khác": 73940117.0
+        "Phí vận chuyển / Khác": 8940117.0
       },
       "regions": {
         "HCM": 361402910.0,
-        "HN": 1079727770.0
+        "HN": 139765320.0
       },
       "reps": {
         "HCMKDKHOA.02": {
@@ -39,8 +39,8 @@
           "reg": "HCM"
         },
         "HNIKDDAO.01": {
-          "rev": 978224450.0,
-          "sos": 3,
+          "rev": 38262000.0,
+          "sos": 1,
           "name": "Vũ Thị Đào",
           "reg": "HN"
         },
@@ -68,17 +68,15 @@
           "RPB EDU & PUBLIC": 88583900.0,
           "Phí vận chuyển / Khác": 250000.0
         },
-        "HNIKDDAO.01": {
-          "THE CITY": 840447450.0,
-          "THE MIA": 72777000.0,
-          "Phí vận chuyển / Khác": 65000000.0
-        },
         "HNIKDMINH.02": {
           "THE MIA": 6619800.0,
           "THE CITY": 6049620.0
         },
         "HCMKDNGHIA.02": {
           "THE MIA": 2757408.0
+        },
+        "HNIKDDAO.01": {
+          "THE CITY": 38262000.0
         }
       }
     },
@@ -1633,30 +1631,30 @@
     }
   },
   "w3": {
-    "revenue": 1205233321.0,
+    "revenue": 265270871.0,
     "kpi_target": 758333333.3333333,
-    "progress": 158.93186650549453,
+    "progress": 34.9807741978022,
     "ads_spend": 26688251.0,
     "fb_spend": 10250809.0,
     "gg_spend": 16437442.0,
-    "cir": 2.2143638526236864,
-    "roas": 45.15969671448309,
+    "cir": 10.060754465574172,
+    "roas": 9.939612415965362,
     "leads": 672,
     "fb_leads": 274,
     "gg_leads": 398,
     "sales_detail": {
-      "total_rev": 1205233321.0,
-      "so_count": 17,
-      "rows_count": 78,
+      "total_rev": 265270871.0,
+      "so_count": 15,
+      "rows_count": 29,
       "brands": {
-        "THE CITY": 962992100.0,
-        "THE MIA": 172132208.0,
+        "THE CITY": 160806650.0,
+        "THE MIA": 99355208.0,
         "RPB EDU & PUBLIC": 1709900.0,
-        "Phí vận chuyển / Khác": 68399113.0
+        "Phí vận chuyển / Khác": 3399113.0
       },
       "regions": {
         "HCM": 219249351.0,
-        "HN": 985983970.0
+        "HN": 46021520.0
       },
       "reps": {
         "HCMKDKHOA.02": {
@@ -1672,8 +1670,8 @@
           "reg": "HCM"
         },
         "HNIKDDAO.01": {
-          "rev": 978224450.0,
-          "sos": 3,
+          "rev": 38262000.0,
+          "sos": 1,
           "name": "Vũ Thị Đào",
           "reg": "HN"
         },
@@ -1699,13 +1697,11 @@
           "Phí vận chuyển / Khác": 3399113.0,
           "THE CITY": 116495030.0
         },
-        "HNIKDDAO.01": {
-          "THE CITY": 840447450.0,
-          "THE MIA": 72777000.0,
-          "Phí vận chuyển / Khác": 65000000.0
-        },
         "HCMKDNGHIA.02": {
           "THE MIA": 2757408.0
+        },
+        "HNIKDDAO.01": {
+          "THE CITY": 38262000.0
         },
         "HNIKDMINH.02": {
           "THE CITY": 6049620.0
