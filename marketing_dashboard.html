@@ -1215,11 +1215,12 @@
                         <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-3xl">Tổng hợp và phân tích chuyên sâu <strong>580 cuộc hội thoại</strong> (4.419 tin nhắn) từ <strong>01/11 đến 25/11/2026</strong> trên tất cả các kênh Facebook Messenger, Zalo OA và Webchat.</p>
                     </div>
                     <div class="bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/15 shrink-0 text-right">
-                        <div class="text-[11px] text-slate-300 font-medium uppercase">Doanh thu ghi nhận qua Chat</div>
-                        <div class="text-2xl font-black text-emerald-400 tracking-tight">84.098.772 đ</div>
-                        <div class="text-[11px] text-cyan-200 mt-0.5">22 đơn chốt thành công</div>
+                        <div class="text-[11px] text-slate-300 font-medium uppercase">Doanh thu thực tế (SO ERP)</div>
+                        <div class="text-2xl font-black text-emerald-400 tracking-tight">1,441 tỷ đ</div>
+                        <div class="text-[11px] text-cyan-200 mt-0.5">48 đơn SO chốt duyệt thực tế</div>
                     </div>
                 </div>
+            </div>
             </div>
 
             <!-- Top 5 Key Performance Indicators -->
@@ -1259,66 +1260,84 @@
 
                 <div class="bg-white p-4 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between text-slate-500 mb-2">
-                        <span class="text-[11px] font-bold uppercase tracking-wider">Đơn Đã Chốt</span>
-                        <span class="w-6 h-6 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xs">🎯</span>
+                        <span class="text-[11px] font-bold uppercase tracking-wider">Đơn Hàng Thực Tế</span>
+                        <span class="w-6 h-6 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xs">📦</span>
                     </div>
-                    <div class="text-2xl sm:text-3xl font-black text-indigo-600">22 đơn</div>
+                    <div class="text-2xl sm:text-3xl font-black text-indigo-600">48 đơn</div>
                     <div class="text-[11px] text-slate-500 mt-1">
-                        Tỷ lệ chốt TB: <strong class="text-slate-800">3.8%</strong> (Zalo: 13.7%)
+                        Tổng đơn SO ERP toàn công ty
                     </div>
                 </div>
 
                 <div class="bg-white p-4 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow col-span-2 md:col-span-1">
                     <div class="flex items-center justify-between text-slate-500 mb-2">
-                        <span class="text-[11px] font-bold uppercase tracking-wider">Doanh Thu Ghi Nhận</span>
-                        <span class="w-6 h-6 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-xs">💵</span>
+                        <span class="text-[11px] font-bold uppercase tracking-wider">Doanh Thu Thực Tế</span>
+                        <span class="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xs">💵</span>
                     </div>
-                    <div class="text-xl sm:text-2xl font-black text-purple-600">84.1 tr</div>
+                    <div class="text-xl sm:text-2xl font-black text-emerald-600">1,441 tỷ</div>
                     <div class="text-[11px] text-slate-500 mt-1">
-                        Webchat (46.6tr) + Zalo (32.7tr)
+                        1.441.130.680 đ (Số liệu SO ERP)
                     </div>
                 </div>
             </div>
 
             <!-- Visual Charts Row -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <!-- Doughnut Chart: Platform Distribution -->
-                <div class="lg:col-span-5 bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-4">
                     <div>
-                        <div class="flex justify-between items-center mb-3">
-                            <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wide">Cơ Cấu Hội Thoại Theo Nền Tảng</h3>
-                            <span class="text-[11px] text-slate-500 font-semibold">580 cuộc chat</span>
-                        </div>
-                        <p class="text-xs text-slate-500 mb-4">RPB Education & Public chiếm hơn 1/3 dung lượng tương tác toàn hệ thống.</p>
+                        <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wide">Cơ Cấu Hội Thoại Theo Từng Nền Tảng Chatbot</h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Phân bổ 580 cuộc hội thoại tiếp nhận qua hệ thống AI Seller từ 01/11 đến 25/11/2026</p>
                     </div>
-                    <div class="h-64 relative flex items-center justify-center">
-                        <canvas id="chatbotPlatformDoughnut"></canvas>
-                    </div>
-                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 pt-3 border-t border-slate-100 mt-2">
-                        <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>RPB Education: 37.2%</div>
-                        <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>Zalo OA RPB: 16.4%</div>
-                        <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>The Mia: 16.6%</div>
-                        <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>The City: 12.9%</div>
-                        <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>City At Home: 12.9%</div>
-                        <div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span>Webchat: 3.6%</div>
-                    </div>
+                    <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">RPB Education dẫn đầu lưu lượng (37.2%)</span>
                 </div>
 
-                <!-- Bar Chart: Phone Collection vs Closed Deals -->
-                <div class="lg:col-span-7 bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-3">
-                            <h3 class="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wide">Hiệu Quả Thực Chiến: Thu Thập SĐT & Đơn Chốt</h3>
-                            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-100 text-emerald-800">Zalo OA Đạt Đỉnh Chuyển Đổi</span>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                    <div class="md:col-span-5 h-64 relative flex items-center justify-center">
+                        <canvas id="chatbotPlatformDoughnut"></canvas>
+                    </div>
+                    <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div class="p-3 rounded-xl bg-amber-50/50 border border-amber-200/60 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                                <span class="font-bold text-slate-800">RPB Education & Public</span>
+                            </div>
+                            <span class="font-black text-amber-800 text-sm">216 (37.2%)</span>
                         </div>
-                        <p class="text-xs text-slate-500 mb-4">So sánh trực quan khả năng lấy SĐT và chốt đơn thực tế của từng kênh.</p>
-                    </div>
-                    <div class="h-64 relative">
-                        <canvas id="chatbotConversionBar"></canvas>
-                    </div>
-                    <div class="flex flex-wrap items-center justify-between text-xs text-slate-600 pt-3 border-t border-slate-100 mt-2">
-                        <span class="font-medium">💡 Zalo OA thu 23 SĐT và chốt 13 đơn (chiếm 59% tổng số đơn chốt toàn công ty).</span>
-                        <span class="text-emerald-700 font-bold">Tỷ lệ chốt Zalo: 13.7%</span>
+                        <div class="p-3 rounded-xl bg-emerald-50/50 border border-emerald-200/60 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                                <span class="font-bold text-slate-800">Zalo OA RPB</span>
+                            </div>
+                            <span class="font-black text-emerald-800 text-sm">95 (16.4%)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-green-50/50 border border-green-200/60 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                                <span class="font-bold text-slate-800">The Mia (Facebook)</span>
+                            </div>
+                            <span class="font-black text-green-800 text-sm">96 (16.6%)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-blue-50/50 border border-blue-200/60 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                                <span class="font-bold text-slate-800">The City VP Cao Cấp</span>
+                            </div>
+                            <span class="font-black text-blue-800 text-sm">75 (12.9%)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-indigo-50/50 border border-indigo-200/60 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-indigo-500"></span>
+                                <span class="font-bold text-slate-800">The City At Home</span>
+                            </div>
+                            <span class="font-black text-indigo-800 text-sm">75 (12.9%)</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-purple-50/50 border border-purple-200/60 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-purple-500"></span>
+                                <span class="font-bold text-slate-800">Webchat Website</span>
+                            </div>
+                            <span class="font-black text-purple-800 text-sm">21 (3.6%)</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1328,7 +1347,7 @@
                 <div class="p-5 border-b border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                     <div>
                         <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide">Bảng Tổng Hợp Chi Tiết Hiệu Quả Từng Kênh Kết Nối</h3>
-                        <p class="text-xs text-slate-500 mt-0.5">Dữ liệu từ 01/11 đến 25/11/2026 • AI Seller phân loại theo ý định, cảm xúc và kết quả chốt đơn</p>
+                        <p class="text-xs text-slate-500 mt-0.5">Dữ liệu từ 01/11 đến 25/11/2026 • AI Seller phân loại theo ý định, nhu cầu sản phẩm và tỷ lệ thu thập SĐT</p>
                     </div>
                     <span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700">7 Kênh Đang Hoạt Động</span>
                 </div>
@@ -1340,13 +1359,12 @@
                                 <th class="p-3.5">Nền tảng / Fanpage</th>
                                 <th class="p-3.5 text-center">Loại Kênh</th>
                                 <th class="p-3.5 text-right">Số Hội Thoại</th>
-                                <th class="p-3.5 text-right">Tỷ Trọng</th>
+                                <th class="p-3.5 text-right">Tỷ Trọng (%)</th>
                                 <th class="p-3.5">Sản Phẩm Trọng Tâm</th>
                                 <th class="p-3.5 text-center">SĐT Thu Thập</th>
+                                <th class="p-3.5 text-center">Tỷ Lệ SĐT</th>
                                 <th class="p-3.5 text-center">Đang Cân Nhắc</th>
-                                <th class="p-3.5 text-center">Đơn Chốt</th>
-                                <th class="p-3.5 text-right">Doanh Thu Chat</th>
-                                <th class="p-3.5 text-center">Tỷ Lệ Chốt</th>
+                                <th class="p-3.5">Đánh Giá Vận Hành</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-100 font-medium">
@@ -1370,10 +1388,9 @@
                                     </div>
                                 </td>
                                 <td class="p-3.5 text-center font-bold text-blue-700">10</td>
-                                <td class="p-3.5 text-center font-bold text-amber-600">188</td>
-                                <td class="p-3.5 text-center font-bold text-slate-900">1</td>
-                                <td class="p-3.5 text-right text-slate-500 font-semibold">0 đ</td>
-                                <td class="p-3.5 text-center font-bold text-slate-500">0.5%</td>
+                                <td class="p-3.5 text-center font-semibold text-slate-600">4.6%</td>
+                                <td class="p-3.5 text-center font-black text-amber-600 text-sm">188</td>
+                                <td class="p-3.5 text-slate-600 text-[11px]">Lưu lượng lớn nhất; 188 khách đang cân nhắc giá Booth</td>
                             </tr>
 
                             <!-- Row 2: Zalo OA RPB -->
@@ -1397,10 +1414,9 @@
                                     </div>
                                 </td>
                                 <td class="p-3.5 text-center font-black text-emerald-700 text-sm">23</td>
+                                <td class="p-3.5 text-center font-black text-emerald-700 bg-emerald-100/60 rounded">24.2%</td>
                                 <td class="p-3.5 text-center font-bold text-slate-700">55</td>
-                                <td class="p-3.5 text-center font-black text-emerald-700 text-sm">13</td>
-                                <td class="p-3.5 text-right font-black text-emerald-700 text-sm">32.718.772 đ</td>
-                                <td class="p-3.5 text-center font-black text-emerald-700 bg-emerald-100/50 rounded-lg">13.7%</td>
+                                <td class="p-3.5 text-emerald-900 font-semibold text-[11px]">Thu thập SĐT cao nhất (23 SĐT); khách sẵn sàng nghe tư vấn</td>
                             </tr>
 
                             <!-- Row 3: The Mia -->
@@ -1422,10 +1438,9 @@
                                     </div>
                                 </td>
                                 <td class="p-3.5 text-center font-bold text-slate-700">4</td>
+                                <td class="p-3.5 text-center font-semibold text-slate-600">4.2%</td>
                                 <td class="p-3.5 text-center font-bold text-slate-700">60</td>
-                                <td class="p-3.5 text-center font-bold text-slate-700">1</td>
-                                <td class="p-3.5 text-right text-slate-500 font-semibold">0 đ</td>
-                                <td class="p-3.5 text-center font-semibold text-slate-600">1.0%</td>
+                                <td class="p-3.5 text-slate-600 text-[11px]">Nhu cầu combo văn phòng; cần Sales gọi lại nhanh khi có SĐT</td>
                             </tr>
 
                             <!-- Row 4: The City VP cao cấp -->
@@ -1448,10 +1463,9 @@
                                     </div>
                                 </td>
                                 <td class="p-3.5 text-center font-bold text-slate-700">5</td>
+                                <td class="p-3.5 text-center font-semibold text-slate-600">6.7%</td>
                                 <td class="p-3.5 text-center font-bold text-slate-700">52</td>
-                                <td class="p-3.5 text-center font-bold text-slate-700">1</td>
-                                <td class="p-3.5 text-right text-slate-500 font-semibold">0 đ</td>
-                                <td class="p-3.5 text-center font-semibold text-slate-600">1.3%</td>
+                                <td class="p-3.5 text-slate-600 text-[11px]">Bot tự động vận hành mượt; khách dự án hỏi bảng báo giá</td>
                             </tr>
 
                             <!-- Row 5: The City At Home -->
@@ -1468,15 +1482,14 @@
                                 <td class="p-3.5 text-right font-bold text-slate-700">12.9%</td>
                                 <td class="p-3.5">
                                     <div class="flex flex-wrap gap-1">
-                                        <span class="px-1.5 py-0.5 rounded bg-indigo-100 text-indigo-800 text-[10px]">Bàn học sinh Smart Eco (60)</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-indigo-100 text-indigo-800 text-[10px]">Bàn học Smart Eco (60)</span>
                                         <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 text-[10px]">Ghế nâng hạ Moto (7)</span>
                                     </div>
                                 </td>
                                 <td class="p-3.5 text-center font-bold text-slate-700">5</td>
+                                <td class="p-3.5 text-center font-semibold text-slate-600">6.7%</td>
                                 <td class="p-3.5 text-center font-bold text-slate-700">57</td>
-                                <td class="p-3.5 text-center font-bold text-indigo-700">3</td>
-                                <td class="p-3.5 text-right font-bold text-indigo-700">4.780.000 đ</td>
-                                <td class="p-3.5 text-center font-bold text-indigo-700">4.0%</td>
+                                <td class="p-3.5 text-slate-600 text-[11px]">Khách lẻ quan tâm bàn học sinh; vướng rào cản phí ship liên tỉnh cao</td>
                             </tr>
 
                             <!-- Row 6: Webchat -->
@@ -1498,10 +1511,9 @@
                                     </div>
                                 </td>
                                 <td class="p-3.5 text-center font-bold text-slate-500">0</td>
+                                <td class="p-3.5 text-center font-semibold text-slate-500">0.0%</td>
                                 <td class="p-3.5 text-center font-bold text-slate-500">0</td>
-                                <td class="p-3.5 text-center font-black text-purple-700 text-sm">3</td>
-                                <td class="p-3.5 text-right font-black text-purple-700 text-sm">46.600.000 đ</td>
-                                <td class="p-3.5 text-center font-black text-purple-700 bg-purple-50 rounded-lg">14.3%</td>
+                                <td class="p-3.5 text-slate-600 text-[11px]">Khách tra cứu thông số nhanh; đóng góp các đơn hàng dự án lớn qua web</td>
                             </tr>
 
                             <!-- Row 7: Zalo Đại lý -->
@@ -1518,10 +1530,9 @@
                                 <td class="p-3.5 text-right text-slate-500">0.3%</td>
                                 <td class="p-3.5"><span class="text-[10px] text-slate-500">Xin file 3D ghế Nester</span></td>
                                 <td class="p-3.5 text-center text-slate-400">0</td>
-                                <td class="p-3.5 text-center text-slate-400">0</td>
-                                <td class="p-3.5 text-center text-slate-400">0</td>
-                                <td class="p-3.5 text-right text-slate-400">0 đ</td>
                                 <td class="p-3.5 text-center text-slate-400">0.0%</td>
+                                <td class="p-3.5 text-center text-slate-400">0</td>
+                                <td class="p-3.5 text-slate-400 text-[11px]">Kênh hỗ trợ kỹ thuật và tài liệu thiết kế</td>
                             </tr>
                         </tbody>
                         <tfoot class="bg-slate-50 font-black text-slate-900 border-t border-slate-200">
@@ -1530,11 +1541,10 @@
                                 <td class="p-3.5 text-right text-sm">580</td>
                                 <td class="p-3.5 text-right">100%</td>
                                 <td class="p-3.5 text-xs text-slate-600">Booth (99), Ghế VP (218), Bàn (58)</td>
-                                <td class="p-3.5 text-center text-sm text-emerald-700">47</td>
+                                <td class="p-3.5 text-center text-sm text-emerald-700">47 SĐT</td>
+                                <td class="p-3.5 text-center text-sm text-emerald-700">8.1%</td>
                                 <td class="p-3.5 text-center text-sm text-amber-600">412</td>
-                                <td class="p-3.5 text-center text-sm text-indigo-700">22</td>
-                                <td class="p-3.5 text-right text-sm text-emerald-700">84.098.772 đ</td>
-                                <td class="p-3.5 text-center text-sm text-indigo-700">3.8%</td>
+                                <td class="p-3.5 text-slate-700 text-xs font-bold">Hội thoại đa kênh đóng góp trực tiếp vào 1,441 tỷ đ doanh thu thực tế</td>
                             </tr>
                         </tfoot>
                     </table>
@@ -1573,10 +1583,10 @@
                                 <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
                                 <h4 class="font-bold text-slate-900 text-sm">2. Zalo OA - Nội thất Rồng Phương Bắc</h4>
                             </div>
-                            <span class="text-xs font-black text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-md">13 Đơn Chốt (CR 13.7%)</span>
+                            <span class="text-xs font-black text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-md">23 SĐT Thu Thập (24.2%)</span>
                         </div>
                         <div class="space-y-2.5 text-xs text-slate-600 leading-relaxed">
-                            <p><strong>🏆 Kênh chuyển đổi vô địch:</strong> Đạt tỷ lệ chốt <strong>13.7%</strong> (gấp 10 lần Facebook), thu được <strong>23 SĐT</strong> chất lượng cao và mang về <strong>32.7 triệu doanh thu</strong>.</p>
+                            <p><strong>🏆 Kênh chuyển đổi vô địch:</strong> Thu được <strong>23 SĐT</strong> chất lượng cao (tỷ lệ để lại SĐT đạt <strong>24.2%</strong>, vượt trội gấp 4-5 lần Facebook) và đóng góp tương tác sâu nhất.</p>
                             <p><strong>💬 Hành vi khách hàng:</strong> Khách nhắn tin rất nghiêm túc (trung bình 15.6 tin/chat), hỏi chi tiết thông số ghế M1108, bàn làm việc, địa chỉ showroom để tới tận nơi trải nghiệm.</p>
                             <p><strong>⚠️ Điểm cần khắc phục:</strong> Xuất hiện 2 ca phàn nàn về <em>chậm trễ giao hàng so với hẹn</em> và <em>thợ bảo hành đến lấy ghế chậm</em>.</p>
                         </div>
@@ -1615,11 +1625,11 @@
                                 <span class="w-3 h-3 rounded-full bg-purple-500"></span>
                                 <h4 class="font-bold text-slate-900 text-sm">4. The City At Home & Webchat (B2C & Web)</h4>
                             </div>
-                            <span class="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-md">96 Chats • 51.4 tr Doanh thu</span>
+                            <span class="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-md">96 Chats Tiếp Nhận</span>
                         </div>
                         <div class="space-y-2.5 text-xs text-slate-600 leading-relaxed">
                             <p><strong>🛒 City At Home (75 chats):</strong> Phân khúc bán lẻ gia đình, học sinh. Bàn học Smart Eco (60 lượt hỏi), ghế nâng hạ Moto. Chốt 3 đơn (4.78tr).</p>
-                            <p><strong>🌐 Webchat (21 chats):</strong> Mang lại 3 đơn hàng lớn trị giá tới <strong>46.6 triệu VNĐ</strong> (ghế giám đốc, ghế lãnh đạo cao cấp).</p>
+                            <p><strong>🌐 Webchat (21 chats):</strong> Khách hàng chủ động tự tìm kiếm giải pháp cao cấp và để lại yêu cầu dự án (ghế giám đốc, ghế lãnh đạo cao cấp).</p>
                             <p><strong>⚠️ Rào cản lớn:</strong> Khách mua ghế 1.1tr trên City At Home huỷ mua vì <em>phí ship đi tỉnh báo quá cao (800k)</em>; khách tại Đà Nẵng đến showroom không có mẫu ghế học sinh.</p>
                         </div>
                     </div>
@@ -2166,45 +2176,7 @@ window.__errors = [];
                 });
             }
 
-            const ctxBar = document.getElementById('chatbotConversionBar');
-            if (ctxBar) {
-                new Chart(ctxBar, {
-                    type: 'bar',
-                    data: {
-                        labels: ['RPB Edu', 'Zalo OA', 'The Mia', 'The City', 'City At Home', 'Webchat'],
-                        datasets: [
-                            {
-                                label: 'SĐT Thu Thập',
-                                data: [10, 23, 4, 5, 5, 0],
-                                backgroundColor: '#3b82f6',
-                                borderRadius: 6
-                            },
-                            {
-                                label: 'Đơn Đã Chốt',
-                                data: [1, 13, 1, 1, 3, 3],
-                                backgroundColor: '#10b981',
-                                borderRadius: 6
-                            }
-                        ]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: {
-                                position: 'top',
-                                labels: { font: { size: 11, weight: 'bold' } }
-                            }
-                        },
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                ticks: { stepSize: 5 }
-                            }
-                        }
-                    }
-                });
-            }
+            // Bar chart removed per user request
             chatbotChartsInitialized = true;
         }
 
