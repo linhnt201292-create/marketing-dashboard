@@ -687,11 +687,81 @@
                             </tr>
                         </tbody>
                     </table>
+                </div></div>
+
+            <!-- BẢNG CHI TIẾT TỪNG ĐƠN HÀNG SO PHÂN THEO KHU VỰC & SALE -->
+            <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden mt-6">
+                <div class="p-4 border-b border-slate-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 bg-gradient-to-r from-slate-50 to-white">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <h3 class="text-sm font-black text-slate-900 uppercase tracking-wide">Chi Tiết Từng Đơn Hàng SO (ERP) Phân Theo Khu Vực & Nhân Sự</h3>
+                            <span class="px-2.5 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-800 font-extrabold" id="soTotalCountBadge">48 đơn SO</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-0.5">Dữ liệu chuẩn theo Ngày CT (Cột H) file SO ERP • Phân bổ doanh số trực tiếp theo từng đơn hàng</p>
+                    </div>
+                    
+                    <!-- Region Filter Buttons -->
+                    <div class="flex flex-wrap items-center gap-1.5">
+                        <span class="text-xs font-bold text-slate-600 uppercase mr-1">Khu vực:</span>
+                        <button onclick="filterSoOrders('ALL')" id="btn-so-reg-ALL" class="so-reg-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-xs">Tất cả (48)</button>
+                        <button onclick="filterSoOrders('HN')" id="btn-so-reg-HN" class="so-reg-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">Hà Nội (11)</button>
+                        <button onclick="filterSoOrders('HCM')" id="btn-so-reg-HCM" class="so-reg-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200">Hồ Chí Minh (37)</button>
+                    </div>
+                </div>
+
+                <!-- Sub-filters Bar: By Sale & Search -->
+                <div class="px-4 py-3 bg-slate-50/80 border-b border-slate-200/70 flex flex-wrap items-center justify-between gap-3 text-xs">
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold text-slate-600 uppercase text-[11px]">Lọc theo Sale:</span>
+                        <select id="soSaleSelect" onchange="filterSoBySaleSelect(this.value)" class="bg-white border border-slate-300 rounded-xl px-3 py-1.5 text-xs text-slate-800 font-bold focus:outline-none focus:ring-1 focus:ring-emerald-500 shadow-2xs">
+                            <option value="ALL">-- Tất cả Sale (5 Nhân sự) --</option>
+                            <optgroup label="🏛️ Khu vực Hà Nội">
+                                <option value="HNIKDDAO.01">Vũ Thị Đào (3 đơn - 978,2 tr)</option>
+                                <option value="HNIKDYEN.01">Vũ Hoàng Yến (6 đơn - 88,8 tr)</option>
+                                <option value="HNIKDMINH.02">Nguyễn Đức Minh (2 đơn - 12,7 tr)</option>
+                            </optgroup>
+                            <optgroup label="🏢 Khu vực Hồ Chí Minh">
+                                <option value="HCMKDKHOA.02">Lê Minh Khoa (36 đơn - 358,6 tr)</option>
+                                <option value="HCMKDNGHIA.02">Phạm Trọng Nghĩa (1 đơn - 2,8 tr)</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="relative w-full sm:w-72">
+                        <input type="text" id="soSearchInput" onkeyup="searchSoOrders()" placeholder="Tìm số SO, khách hàng, sản phẩm..." class="w-full text-xs px-3 py-1.5 pl-8 rounded-xl border border-slate-300 focus:outline-none focus:ring-1 focus:ring-emerald-500 bg-white shadow-2xs">
+                        <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                </div>
+
+                <!-- SO Table -->
+                <div class="overflow-x-auto max-h-[550px]">
+                    <table class="w-full text-left text-xs" id="soOrdersTable">
+                        <thead class="bg-slate-100/90 text-slate-700 font-bold uppercase tracking-wider sticky top-0 border-b border-slate-200 z-10">
+                            <tr>
+                                <th class="p-3 text-center w-12">STT</th>
+                                <th class="p-3">Số SO</th>
+                                <th class="p-3">Ngày CT</th>
+                                <th class="p-3 text-center w-14 whitespace-nowrap">Khu vực</th>
+                                <th class="p-3">Nhân sự (Sale)</th>
+                                <th class="p-3 max-w-xs">Khách hàng / Đơn vị</th>
+                                <th class="p-3 text-center">Thương hiệu</th>
+                                <th class="p-3 max-w-sm">Sản phẩm tiêu biểu</th>
+                                <th class="p-3 text-right">Doanh số (VND)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 font-medium" id="soOrdersTableBody">
+                            <!-- Injected by JS -->
+                        </tbody>
+                        <tfoot id="soOrdersTableFoot" class="sticky bottom-0 z-10 bg-emerald-100/95 font-extrabold border-t-2 border-emerald-400 text-slate-900 shadow-md">
+                            <!-- Injected by JS -->
+                        </tfoot>
+                    </table>
                 </div>
             </div>
+
         </div>
 
-        <!-- ========================================== -->
+        <!-- ==========================================
         <!-- TAB 3: GOOGLE ADS -->
         <!-- ========================================== -->
         <div id="tab-google" class="tab-content hidden space-y-6">
@@ -2523,8 +2593,168 @@ window.__errors = [];
 
     
 
+        
+    // =========================================================
+    // SO ORDERS DETAIL DATA & RENDERING LOGIC
+    // =========================================================
+    var soOrdersMaster = [{"so": "265161", "date": "14/11/2026", "region": "HN", "emp_id": "HNIKDMINH.02", "emp_name": "Nguyễn Đức Minh", "customer": "CÔNG TY TNHH NAT EPIC", "brands": "The Mia", "total_val": 6619800.0, "items": "Ghế VP 1105F (M10510A59M6685CB1AC1) - Có gác chân"}, {"so": "265150", "date": "19/11/2026", "region": "HN", "emp_id": "HNIKDMINH.02", "emp_name": "Nguyễn Đức Minh", "customer": "ANH HÒA", "brands": "The City", "total_val": 6049620.0, "items": "Ghế VP Airblade D - 01  (ABED10A88BNB10B10PC1)"}, {"so": "265003", "date": "04/11/2026", "region": "HN", "emp_id": "HNIKDYEN.01", "emp_name": "Vũ Hoàng Yến", "customer": "CÔNG TY TNHH MS. NGÂN'S ENGLISH", "brands": "Edu & Public", "total_val": 78750000.0, "items": "Phonebooth đôi - PB-DOI (KT:  2200x1200x2200mm) WPB phủ laminate LK 020A; Bàn phonebooth - TB-01 (KT: 800x500x750mm) MFC 619EV (+1 sp khác)"}, {"so": "265041", "date": "06/11/2026", "region": "HN", "emp_id": "HNIKDYEN.01", "emp_name": "Vũ Hoàng Yến", "customer": "TRẦN HỮU TÂN", "brands": "Khác, Edu & Public", "total_val": 3030000.0, "items": "Hỗ trợ chi phí giao hàng; Bàn học sinh - Smart Eco (KT: D700x W500x600-720mm) MDF chống ẩm 475NWM (+1 sp khác)"}, {"so": "265061", "date": "09/11/2026", "region": "HN", "emp_id": "HNIKDYEN.01", "emp_name": "Vũ Hoàng Yến", "customer": "CÔNG TY TNHH MS. NGÂN'S ENGLISH", "brands": "Edu & Public", "total_val": 2672000.0, "items": "Bàn học sinh - Smart Eco (KT: D700x W500x600-720mm) MDF chống ẩm 475NWM; Ghế đa năng TITAN 03- RED"}, {"so": "265062", "date": "09/11/2026", "region": "HN", "emp_id": "HNIKDYEN.01", "emp_name": "Vũ Hoàng Yến", "customer": "CÔNG TY TNHH MS. NGÂN'S ENGLISH", "brands": "Edu & Public", "total_val": 2672000.0, "items": "Bàn học sinh - Smart Eco (KT: D700x W500x600-720mm) MDF chống ẩm 475NWM; Ghế đa năng TITAN T3 ( T3 - L2 - Olive) - MÀU XANH CỐM"}, {"so": "265207", "date": "18/11/2026", "region": "HN", "emp_id": "HNIKDYEN.01", "emp_name": "Vũ Hoàng Yến", "customer": "NGUYỄN THỊ THẢO YÊN", "brands": "Edu & Public", "total_val": 674900.0, "items": "Ghế đa năng TITAN 06"}, {"so": "265237", "date": "19/11/2026", "region": "HN", "emp_id": "HNIKDYEN.01", "emp_name": "Vũ Hoàng Yến", "customer": "ANH LIÊN", "brands": "Edu & Public", "total_val": 1035000.0, "items": "Ghế VP M1090 (M09004A00NAG00BL41C8)"}, {"so": "265043", "date": "17/11/2026", "region": "HN", "emp_id": "HNIKDDAO.01", "emp_name": "Vũ Thị Đào", "customer": "CÔNG TY TNHH TƯ VẤN KIẾN TRÚC VÀ DỊCH VỤ XÂY DỰNG YÊN YÊN", "brands": "The City", "total_val": 38262000.0, "items": "Ghế VP Willy 07 (WLY07A10M465CTB1CC2); GHẾ VP WESLEY (WSY09A70M1865CB3CC2) (+4 sp khác)"}, {"so": "265222", "date": "19/11/2026", "region": "HN", "emp_id": "HNIKDDAO.01", "emp_name": "Vũ Thị Đào", "customer": "CÔNG TY CỔ PHẦN  MOUSSE XỐP CHIYA", "brands": "The City, Khác, The Mia", "total_val": 665379000.0, "items": "Quầy lễ tân - Q01 (KT: W1800 x D600 x H1050mm) MFC 440NWG & 104MM; Vách sau quầy - V01  (KT: W3000 x D100 x H3100mm) MFC 440NWG (+30 sp khác)"}, {"so": "265223", "date": "19/11/2026", "region": "HN", "emp_id": "HNIKDDAO.01", "emp_name": "Vũ Thị Đào", "customer": "CÔNG TY CỔ PHẦN  MOUSSE XỐP CHIYA", "brands": "The City, Khác, The Mia", "total_val": 274583450.0, "items": "Bàn Giám đốc - B03  (KT: W1600 x D700 x H800mm ) MDF chống ẩm 440NWG; Bàn Quản lý - B05  (KT:  W1400 x D700 x H800mm ) MFC 440NWG (+15 sp khác)"}, {"so": "264959", "date": "02/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CHỊ THẢO", "brands": "Khác, Edu & Public", "total_val": 1315740.0, "items": "Ghế nâng hạ Moto II; Phí giao hàng lắp đặt"}, {"so": "264968", "date": "03/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH TM DV THIẾT KẾ XÂY DỰNG SUMSTYLE", "brands": "Khác, The Mia", "total_val": 2616300.0, "items": "Ghế VP M1104-02 (M10409A30M1385CB1CC8); Phí giao hàng lắp đặt"}, {"so": "264980", "date": "03/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG URBICONS", "brands": "Khác, The Mia", "total_val": 2930460.0, "items": "Ghế VP M1101_D - 02 (M101D06A30M210BB3PC1); Phí giao hàng lắp đặt"}, {"so": "265001", "date": "04/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY CỔ PHẦN NAM LONG CORP", "brands": "The City, Khác", "total_val": 2765730.0, "items": "Ghế VP REX 03 ( REX10A89M1360BB22PC8 ); Phí giao hàng lắp đặt"}, {"so": "265004", "date": "04/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "ANH THIỆN ĐỒNG TÂM LONG AN", "brands": "The City, Khác", "total_val": 2608650.0, "items": "Ghế VP M1085  (M08510A121M4365CTB1CC2); Phí giao hàng lắp đặt"}, {"so": "265010", "date": "04/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH NỘI THẤT BEMOS", "brands": "The City", "total_val": 1251000.0, "items": "Ghế VP M1089 (M08905A122NAG00BC2C0)"}, {"so": "265019", "date": "04/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CHỊ NHUNG", "brands": "The City, Khác", "total_val": 6178200.0, "items": "Ghế Momo - (MMO06A00M5010BB45C2); Phí giao hàng lắp đặt"}, {"so": "265021", "date": "04/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "ANH TÙNG LÂM", "brands": "The City, Khác", "total_val": 16569900.0, "items": "Ghế VP Willy 09 (WLY05A10NAG00BC1C0); Ghế VP REX 01 ( REX10A89M1385CTB2AC2 ) (+1 sp khác)"}, {"so": "265048", "date": "06/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH ORTHOLITE VIỆT NAM", "brands": "Khác, The Mia", "total_val": 5610000.0, "items": "Ghế VP M1085 (M08510A121M4385CTB1CC8); Phí giao hàng lắp đặt"}, {"so": "265066", "date": "09/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY CỔ PHẦN NỘI THẤT AKA", "brands": "Khác, The Mia", "total_val": 6395400.0, "items": "Ghế VP M1102_ D 02 (M102D10A146M210BB4PC1); Phí giao hàng lắp đặt"}, {"so": "265067", "date": "09/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH THIẾT KẾ - XÂY DỰNG - THƯƠNG MẠI TÂM TÂM PHƯƠNG", "brands": "The City, Khác", "total_val": 357000.0, "items": "Bộ điều khiển M2 - ST-A32 SH MECHANISM - SH MECHANISM; Phí giao hàng lắp đặt"}, {"so": "265078", "date": "09/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CHỊ HÀ", "brands": "The Mia", "total_val": 3090000.0, "items": "Ghế VP M1104-01 (M10410A30M1310BB3PC1)"}, {"so": "265081", "date": "11/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "ANH DUY", "brands": "The City, Khác", "total_val": 33449100.0, "items": "Bàn đơn Manifesto kèm vách G60 - WD01 (KT:W1200 x D600 x H750mm) MFC 101T; Tủ Di Động 3 Ngăn - MB01 (KT: W400 x D500 x H600mm) MFC 10083T & 101T (+1 sp khác)"}, {"so": "265114", "date": "12/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "ANH ĐẶNG KIM NHỰT", "brands": "Khác, The Mia", "total_val": 2652000.0, "items": "Ghế VP 1108-01 (M10810A73M485CB1AC1); Phí giao hàng lắp đặt"}, {"so": "265116", "date": "12/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY CP THƯƠNG MẠI VÀ SẢN XUẤT HANTECH", "brands": "The City, Khác", "total_val": 11500000.0, "items": "Ghế VP FUJI (FJI05A36NAG00BC3C0); Phí giao hàng lắp đặt"}, {"so": "265117", "date": "12/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH  THIẾT KẾ VÀ TRANG TRÍ NỘI THẤT LỘC KHANG", "brands": "The City, Khác", "total_val": 8720000.0, "items": "Bộ nắp đế máng điện đơn 03 socket ( máng điện thẳng ) - Màu trắng; Tấm che tole 1.0mm - JC-01 (KT: W500 x D20 x H620mm) màu trắng nhám (+1 sp khác)"}, {"so": "265118", "date": "12/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH ĐẤT HỢP", "brands": "Khác, The Mia", "total_val": 1422900.0, "items": "GHẾ VP M1102_ D (M102D06A146M285CB5CC8); Phí giao hàng lắp đặt"}, {"so": "265119", "date": "12/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY CỔ PHẦN  KỸ THUẬT HOÀNG LONG GIANG", "brands": "Khác, The Mia", "total_val": 2519400.0, "items": "Ghế VP M1071 (M07109A63M285CB1AC1); Phí giao hàng lắp đặt"}, {"so": "265120", "date": "12/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH MỘT THÀNH VIÊN THƯƠNG MẠI  DỊCH VỤ GIA NGUYỄN NGUYỄN", "brands": "Khác, Edu & Public", "total_val": 7428750.0, "items": "Ghế Bar Labsit 01; Phí giao hàng lắp đặt"}, {"so": "265121", "date": "12/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH ĐẦU TƯ NAM LONG LAND", "brands": "The City, Khác", "total_val": 3730650.0, "items": "Ghế VP REX 01 ( REX10A89M1385CTB2AC2 ); Phí giao hàng lắp đặt"}, {"so": "265133", "date": "12/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH ASPIRE SOFT TECH", "brands": "The City, Khác", "total_val": 3570000.0, "items": "Ghế VP Vito (VTO06A89M1385CB1CC2); Phí giao hàng lắp đặt"}, {"so": "265136", "date": "13/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CHỊ THẢO VŨ", "brands": "Edu & Public", "total_val": 1224305.0, "items": "Ghế đa năng Titan 06 - Sky Blue"}, {"so": "265152", "date": "13/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐỨC TƯỜNG", "brands": "Khác, The Mia", "total_val": 4126410.0, "items": "Phí giao hàng lắp đặt; Ghế VP M1090  (M09004A00NAG00BL42C0)-không bánh xe"}, {"so": "265157", "date": "13/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CHI NHÁNH TẠI THÀNH PHỐ HỒ CHÍ MINH CÔNG TY CỔ PHẦN NETNAM (THÀNH PHỐ HÀ NỘI)", "brands": "The City, Khác", "total_val": 306000.0, "items": "TỰA ĐẦU GHẾ MARS MÀU TỰA ĐẦU : E031-TINY BROWN; Phí giao hàng lắp đặt"}, {"so": "265158", "date": "14/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH TÚI XÁCH SIMONE VIỆT NAM", "brands": "The City, Khác", "total_val": 357000.0, "items": "Chân ghế B1C- - sắt mạ chrome - 350MM WILLY SPIKY BASE; Phí giao hàng lắp đặt"}, {"so": "265088", "date": "16/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY CỔ PHẦN PHÚC SINH", "brands": "The City, Khác", "total_val": 2156000.0, "items": "Lưng + nệm Wallas thấp - bọc EB26; Phí giao hàng lắp đặt"}, {"so": "265177", "date": "16/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐỨC TƯỜNG", "brands": "Khác, The Mia", "total_val": 71169480.0, "items": "GHẾ VP M1102_ T (M102T06A147M285CTB1CC2); Ghế VP M1111-01 (M111X10A90M1385CTB1CC2)- khung xám (+3 sp khác)"}, {"so": "265184", "date": "17/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH KỸ THUẬT ILLIES VIỆT NAM", "brands": "The City, Khác", "total_val": 59591052.0, "items": "GHẾ VP REX (REX10A89M1385CB1CC2); Phí giao hàng lắp đặt"}, {"so": "265194", "date": "17/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH KỸ THUẬT ILLIES VIỆT NAM", "brands": "The City, Khác", "total_val": 16648879.0, "items": "Bàn nâng hạ T+( T+) (KT : W1800 x D800 x H600-1250mm) MFC 9223NV; Phí giao hàng lắp đặt"}, {"so": "265198", "date": "17/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "ANH KHOA", "brands": "The Mia", "total_val": 1406500.0, "items": "GHẾ VP M1102_ D (M102D06A146M210BB3PC1)"}, {"so": "265220", "date": "18/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH NARACO", "brands": "The Mia", "total_val": 2780700.0, "items": "Ghế VP 1106F - D02 (M106D10A12M1385CB1AC1) - Có gác chân"}, {"so": "265231", "date": "18/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY CỔ PHẦN ZEGAL VIỆT NAM", "brands": "The City", "total_val": 39200000.0, "items": "Ghế FERRO -  CH-515B-2"}, {"so": "265239", "date": "19/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH  DỊCH VỤ  VỆ SINH CAO CẤP HAUS", "brands": "Khác, The Mia", "total_val": 4729332.0, "items": "Ghế VP M1106_D04 (M106D09A72M110BB3PC1); Phí giao hàng lắp đặt"}, {"so": "265241", "date": "19/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY CỔ PHẦN PHÚC SINH", "brands": "The City", "total_val": 450000.0, "items": "Bọc  lại tay ghế của khách màu EB26 + vệ sinh ghế"}, {"so": "265247", "date": "19/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY CỔ PHẦN VNG", "brands": "Khác, The Mia", "total_val": 18360000.0, "items": "GHẾ VP M1040 (M04005A74NAG00BC22C0); Phí giao hàng lắp đặt"}, {"so": "265276", "date": "23/11/2026", "region": "HCM", "emp_id": "HCMKDKHOA.02", "emp_name": "Lê Minh Khoa", "customer": "CÔNG TY TNHH  DỊCH VỤ  VỆ SINH CAO CẤP HAUS", "brands": "Khác, The Mia", "total_val": 9458664.0, "items": "Ghế VP M1106_D04 (M106D09A72M110BB3PC1); Phí giao hàng lắp đặt"}, {"so": "265244", "date": "19/11/2026", "region": "HCM", "emp_id": "HCMKDNGHIA.02", "emp_name": "Phạm Trọng Nghĩa", "customer": "CÔNG TY TNHH PHÂN PHỐI VÀ THƯƠNG MẠI AMA", "brands": "The Mia", "total_val": 2757408.0, "items": "Ghế VP M1071 (M07109A63M285CB1AC1)"}];
+    var currentSoRegion = 'ALL';
+    var currentSoSale = 'ALL';
+
+    function renderSoOrdersTable(orders) {
+        const tbody = document.getElementById('soOrdersTableBody');
+        const tfoot = document.getElementById('soOrdersTableFoot');
+        const badge = document.getElementById('soTotalCountBadge');
+        if (!tbody) return;
+        tbody.innerHTML = '';
+        if (tfoot) tfoot.innerHTML = '';
+
+        if (badge) badge.textContent = (orders ? orders.length : 0) + ' đơn SO';
+
+        if (!orders || orders.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="9" class="p-6 text-center text-slate-400 italic">Không có đơn hàng nào khớp với điều kiện lọc.</td></tr>';
+            return;
+        }
+
+        let totalRev = 0;
+
+        orders.forEach((o, idx) => {
+            totalRev += (Number(o.total_val) || 0);
+            const tr = document.createElement('tr');
+            tr.className = 'hover:bg-slate-50 transition-colors';
+
+            const regBadge = o.region === 'HN' 
+                ? '<span class="px-2 py-0.5 rounded text-[10px] font-black bg-blue-100 text-blue-800 border border-blue-200 whitespace-nowrap">HN</span>'
+                : '<span class="px-2 py-0.5 rounded text-[10px] font-black bg-emerald-100 text-emerald-800 border border-emerald-200 whitespace-nowrap">HCM</span>';
+
+            let brandBadges = '';
+            const bStr = (o.brands || '');
+            if (bStr.includes('The City')) brandBadges += '<span class="px-1.5 py-0.5 rounded text-[10px] font-bold badge-brand-city mr-1">The City</span>';
+            if (bStr.includes('The Mia')) brandBadges += '<span class="px-1.5 py-0.5 rounded text-[10px] font-bold badge-brand-mia mr-1">The Mia</span>';
+            if (bStr.includes('Edu')) brandBadges += '<span class="px-1.5 py-0.5 rounded text-[10px] font-bold badge-brand-edu mr-1">Edu & Public</span>';
+            if (!brandBadges) brandBadges = '<span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-slate-100 text-slate-600">Khác</span>';
+
+            tr.innerHTML = `
+                <td class="p-3 text-center text-slate-400 font-bold">${idx + 1}</td>
+                <td class="p-3 font-mono font-bold text-slate-900"><span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">${o.so}</span></td>
+                <td class="p-3 text-slate-600 font-medium whitespace-nowrap">${o.date}</td>
+                <td class="p-3 text-center whitespace-nowrap">${regBadge}</td>
+                <td class="p-3 font-bold text-slate-800 whitespace-nowrap">${o.emp_name}</td>
+                <td class="p-3 font-semibold text-slate-900 max-w-xs truncate" title="${o.customer}">${o.customer}</td>
+                <td class="p-3 text-center whitespace-nowrap">${brandBadges}</td>
+                <td class="p-3 text-slate-600 max-w-sm truncate" title="${o.items}">${o.items}</td>
+                <td class="p-3 text-right font-black text-emerald-700 whitespace-nowrap">${formatMoneyVND(o.total_val)}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+
+        if (tfoot) {
+            let filterDesc = 'Tất cả đơn hàng';
+            if (currentSoSale !== 'ALL') {
+                const sel = document.getElementById('soSaleSelect');
+                filterDesc = sel ? sel.options[sel.selectedIndex].text : currentSoSale;
+            } else if (currentSoRegion !== 'ALL') {
+                filterDesc = currentSoRegion === 'HN' ? 'Khu vực Hà Nội' : 'Khu vực TP. Hồ Chí Minh';
+            }
+
+            tfoot.innerHTML = `
+                <tr class="bg-emerald-100/95 font-extrabold border-t-2 border-emerald-400 text-slate-900 shadow-sm sticky bottom-0 z-10">
+                    <td class="p-3 text-center text-slate-600 font-black">∑</td>
+                    <td class="p-3 uppercase text-xs tracking-wider" colspan="3">
+                        <div class="flex items-center gap-1.5 font-black text-emerald-950">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                            TỔNG CỘNG (${orders.length} đơn SO)
+                        </div>
+                    </td>
+                    <td class="p-3 font-bold text-emerald-900" colspan="2"><span class="px-2 py-0.5 rounded text-[11px] font-black bg-emerald-200 text-emerald-950 border border-emerald-300">${filterDesc}</span></td>
+                    <td class="p-3" colspan="2"></td>
+                    <td class="p-3 text-right text-emerald-800 font-black text-sm whitespace-nowrap">${formatMoneyVND(totalRev)}</td>
+                </tr>
+            `;
+        }
+    }
+
+    function filterSoOrders(region) {
+        currentSoRegion = region;
+        document.querySelectorAll('.so-reg-btn').forEach(b => {
+            b.classList.remove('bg-emerald-600', 'text-white', 'font-bold');
+            b.classList.add('bg-slate-100', 'text-slate-700', 'font-semibold');
+        });
+        const activeBtn = document.getElementById('btn-so-reg-' + region);
+        if (activeBtn) {
+            activeBtn.classList.remove('bg-slate-100', 'text-slate-700', 'font-semibold');
+            activeBtn.classList.add('bg-emerald-600', 'text-white', 'font-bold');
+        }
+
+        // If region is changed, reset sale select if incompatible
+        const sel = document.getElementById('soSaleSelect');
+        if (sel) {
+            if (region === 'HN' && sel.value.startsWith('HCM')) sel.value = 'ALL';
+            if (region === 'HCM' && sel.value.startsWith('HN')) sel.value = 'ALL';
+            currentSoSale = sel.value;
+        }
+
+        applyAllSoFilters();
+    }
+
+    function filterSoBySaleSelect(saleId) {
+        currentSoSale = saleId;
+        if (saleId.startsWith('HN')) {
+            currentSoRegion = 'HN';
+            updateSoRegBtns('HN');
+        } else if (saleId.startsWith('HCM')) {
+            currentSoRegion = 'HCM';
+            updateSoRegBtns('HCM');
+        }
+        applyAllSoFilters();
+    }
+
+    function updateSoRegBtns(reg) {
+        document.querySelectorAll('.so-reg-btn').forEach(b => {
+            b.classList.remove('bg-emerald-600', 'text-white', 'font-bold');
+            b.classList.add('bg-slate-100', 'text-slate-700', 'font-semibold');
+        });
+        const activeBtn = document.getElementById('btn-so-reg-' + reg);
+        if (activeBtn) {
+            activeBtn.classList.remove('bg-slate-100', 'text-slate-700', 'font-semibold');
+            activeBtn.classList.add('bg-emerald-600', 'text-white', 'font-bold');
+        }
+    }
+
+    function searchSoOrders() {
+        applyAllSoFilters();
+    }
+
+    function applyAllSoFilters() {
+        let list = soOrdersMaster;
+        if (currentSoRegion !== 'ALL') {
+            list = list.filter(o => o.region === currentSoRegion);
+        }
+        if (currentSoSale !== 'ALL') {
+            list = list.filter(o => o.emp_id === currentSoSale);
+        }
+        const q = (document.getElementById('soSearchInput')?.value || '').toLowerCase().trim();
+        if (q) {
+            list = list.filter(o => 
+                (o.so || '').toLowerCase().includes(q) ||
+                (o.customer || '').toLowerCase().includes(q) ||
+                (o.emp_name || '').toLowerCase().includes(q) ||
+                (o.brands || '').toLowerCase().includes(q) ||
+                (o.items || '').toLowerCase().includes(q)
+            );
+        }
+        renderSoOrdersTable(list);
+    }
+
+    window.filterSoOrders = filterSoOrders;
+    window.filterSoBySaleSelect = filterSoBySaleSelect;
+    window.searchSoOrders = searchSoOrders;
+    window.renderSoOrdersTable = renderSoOrdersTable;
+
+
         // Render Charts
         window.addEventListener('DOMContentLoaded', () => {
+            renderSoOrdersTable(soOrdersMaster);
             setPeriod('all');
 
             if (typeof Chart === 'undefined') return;
