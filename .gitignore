@@ -14,3 +14,9 @@ temp_*.js
 .agents/
 skills-lock.json
 Screenshot*.png
+
+# Allow Lala report Excel and CSV files
+!lala/*.xlsx
+!lala/*.csv
+!lala-2025/*.xlsx
+!lala-2025/*.csv
