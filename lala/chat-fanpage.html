@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo Cáo Phân Tích Chuyên Sâu Chat Fanpage Lala Shop (01/11 - 25/11/2026)</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8fafc;
+      color: #1e293b;
+      font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: -0.012em;
+    }
+    .font-mono {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="p-4 md:p-8 antialiased">
+  <div class="max-w-7xl mx-auto space-y-6">
+    
+    <!-- HEADER -->
+    <header class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="p-2.5 bg-slate-100 hover:bg-slate-200 rounded-xl transition text-slate-700 font-bold text-xs flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          Dashboard Tổng
+        </a>
+        <a href="chat-zalo.html" class="p-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 rounded-xl transition font-bold text-xs flex items-center gap-1.5">
+          <span>📱</span> Chat Zalo Quỳnh & Dung (197M)
+        </a>
+        <div class="h-6 w-px bg-slate-200"></div>
+        <div>
+          <h1 class="text-lg md:text-xl font-extrabold text-slate-900">LALA SHOP - BÁO CÁO CHUYÊN SÂU KÊNH CHAT FANPAGE</h1>
+          <p class="text-xs text-slate-500">Đối soát: Dữ liệu AI Seller MCP (366 cuộc chat) & Phần mềm quản lý đơn hàng</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold rounded-full">
+          Doanh Số Thực Tế: 23,42 Tr đ
+        </span>
+        <button onclick="window.print()" class="px-3.5 py-1.5 bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold rounded-xl shadow-sm transition flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          In / Xuất PDF
+        </button>
+      </div>
+    </header>
+
+    <!-- NỘI DUNG CHÍNH -->
+    
+    <!-- TAB 5: CHUYÊN SÂU CHAT FANPAGE -->
+    <div id="tab-chat-fanpage" class="space-y-6">
+      
+      <!-- HEADER BANNER CỦA TAB -->
+      <div class="bg-gradient-to-r from-indigo-900 via-blue-900 to-slate-900 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+          <svg class="w-72 h-72" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.454 5.517 3.737 7.218-.163.953-.668 2.502-1.897 3.702-.192.188-.12.518.136.608 1.838.647 4.14.34 5.792-.68 1.15.228 2.37.352 3.632.352 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2z"/></svg>
+        </div>
+        <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2.5">
+              <span class="px-2.5 py-1 bg-indigo-500/30 text-indigo-200 border border-indigo-400/30 text-xs font-bold rounded-lg uppercase tracking-wider flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Báo Cáo Đối Soát Dữ Liệu Kép
+              </span>
+              <span class="text-xs text-indigo-200">Kỳ đối soát: 01/11/2026 – 25/11/2026</span>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-black mt-2 tracking-tight text-white flex items-center gap-2.5">
+              <span>💬</span> BÁO CÁO PHÂN TÍCH CHUYÊN SÂU CHAT FANPAGE LALA SHOP
+            </h2>
+            <p class="text-sm text-indigo-100/80 mt-1 max-w-3xl">
+              Đối soát toàn diện giữa <b>366 hội thoại trên AI Seller MCP</b> và <b>Dữ liệu đơn hàng thực tế ghi nhận từ Phần Mềm Quản Lý Bán Hàng</b>, bóc tách nguyên nhân đứt gãy phễu và chiến lược giải phóng 240 khách hàng đang tồn đọng.
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="chat-fanpage.html" target="_blank" class="px-4 py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-xl text-xs font-bold transition flex items-center gap-2 backdrop-blur-sm">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Mở trang riêng biệt
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- KEY COMPARISON KPI CARDS (ĐỐI SOÁT CHÍNH) -->
+      <section class="grid grid-cols-2 md:grid-cols-5 gap-4">
+        
+        <!-- Doanh số thực tế phần mềm -->
+        <div class="bg-gradient-to-br from-emerald-500/10 via-white to-white border-2 border-emerald-400 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between text-xs font-extrabold text-emerald-800 uppercase tracking-wider">
+            <span>DT Thực Tế Phần Mềm</span>
+            <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 text-[10px] font-black rounded-md">CHUẨN POS</span>
+          </div>
+          <div class="text-2xl md:text-3xl font-black text-emerald-600 mt-2 font-mono">23,42 Tr đ</div>
+          <div class="text-xs text-slate-500 mt-2 pt-2 border-t border-slate-100 flex items-center justify-between">
+            <span><b>19 đơn</b> chốt thành công</span>
+            <span class="text-emerald-700 font-bold">AOV: 1,23 Tr/đơn</span>
+          </div>
+        </div>
+
+        <!-- Doanh số ghi nhận chat AI -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span>DT Ghi Nhận Trên Chat</span>
+            <span class="text-indigo-500">🤖 AI Parse</span>
+          </div>
+          <div class="text-2xl md:text-3xl font-black text-indigo-600 mt-2 font-mono">12,47 Tr đ</div>
+          <div class="text-xs text-slate-500 mt-2 pt-2 border-t border-slate-100 flex items-center justify-between">
+            <span>17 đơn có giá trị rõ</span>
+            <span class="text-slate-400 font-medium">Chênh lệch: 10,95 Tr</span>
+          </div>
+        </div>
+
+        <!-- Chi phí Ads & ROAS Thực Tế -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span>Chi Phí Ads & ROAS</span>
+            <span class="text-blue-500">📢 Meta Ads</span>
+          </div>
+          <div class="text-2xl md:text-3xl font-black text-blue-600 mt-2 font-mono">ROAS 2,66x</div>
+          <div class="text-xs text-slate-500 mt-2 pt-2 border-t border-slate-100 flex items-center justify-between">
+            <span>Tiêu: <b>8,82 Tr đ</b></span>
+            <span class="text-rose-600 font-bold">ACOS: 37,64%</span>
+          </div>
+        </div>
+
+        <!-- Lượng khách cân nhắc tồn đọng -->
+        <div class="bg-gradient-to-br from-amber-500/10 via-white to-white border-2 border-amber-300 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between text-xs font-extrabold text-amber-800 uppercase tracking-wider">
+            <span>Khách Đang Cân Nhắc</span>
+            <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-black rounded-md">MỎ VÀNG</span>
+          </div>
+          <div class="text-2xl md:text-3xl font-black text-amber-600 mt-2 font-mono">240 khách</div>
+          <div class="text-xs text-slate-500 mt-2 pt-2 border-t border-slate-100 flex items-center justify-between">
+            <span><b>65,6%</b> tổng số khách</span>
+            <span class="text-amber-700 font-bold">Tiềm năng: +18M</span>
+          </div>
+        </div>
+
+        <!-- Tỷ lệ nhân viên tiếp quản -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <span>Sale Tiếp Quản Chat</span>
+            <span class="text-purple-500">👥 Handover</span>
+          </div>
+          <div class="text-2xl md:text-3xl font-black text-purple-600 mt-2 font-mono">89,9%</div>
+          <div class="text-xs text-slate-500 mt-2 pt-2 border-t border-slate-100 flex items-center justify-between">
+            <span>310 ca nhân viên trực</span>
+            <span class="text-purple-700 font-bold">Điểm CSKH: 4.62★</span>
+          </div>
+        </div>
+
+      </section>
+
+<!-- PHỄU CHUYỂN ĐỔI HỘI THOẠI & PHÂN BỔ SẢN PHẨM -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Phễu chuyển đổi -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
+              <span>🎯</span> Phễu Chuyển Đổi Hội Thoại Messenger (366 Cuộc Trò Chuyện)
+            </h3>
+            <span class="text-xs font-bold text-slate-400">Tỷ lệ rớt phễu: 94,8%</span>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Bước 1: Tiếp cận -->
+            <div>
+              <div class="flex justify-between text-xs mb-1 font-semibold">
+                <span class="text-slate-700">1. Tổng khách nhắn tin vào Fanpage</span>
+                <span class="font-mono text-slate-900 font-bold">366 khách (100%)</span>
+              </div>
+              <div class="w-full bg-slate-100 rounded-full h-3">
+                <div class="bg-indigo-600 h-3 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <!-- Bước 2: Nhận diện nhu cầu -->
+            <div>
+              <div class="flex justify-between text-xs mb-1 font-semibold">
+                <span class="text-slate-700">2. Khách hỏi cụ thể sản phẩm & giá (Pricing Intent)</span>
+                <span class="font-mono text-blue-700 font-bold">248 khách (67,8%)</span>
+              </div>
+              <div class="w-full bg-slate-100 rounded-full h-3">
+                <div class="bg-blue-500 h-3 rounded-full" style="width: 67.8%"></div>
+              </div>
+            </div>
+
+            <!-- Bước 3: Nhân viên tiếp quản tư vấn -->
+            <div>
+              <div class="flex justify-between text-xs mb-1 font-semibold">
+                <span class="text-slate-700">3. Nhân viên sale tiếp quản tư vấn trực tiếp (Admin Reply)</span>
+                <span class="font-mono text-purple-700 font-bold">310 khách (84,7%)</span>
+              </div>
+              <div class="w-full bg-slate-100 rounded-full h-3">
+                <div class="bg-purple-500 h-3 rounded-full" style="width: 84.7%"></div>
+              </div>
+            </div>
+
+            <!-- Bước 4: Khách dừng lại cân nhắc -->
+            <div>
+              <div class="flex justify-between text-xs mb-1 font-semibold">
+                <span class="text-amber-800 font-bold">4. Khách nhận báo giá xong im lặng / Cân nhắc (TỒN ĐỌNG)</span>
+                <span class="font-mono text-amber-600 font-extrabold">240 khách (65,6%)</span>
+              </div>
+              <div class="w-full bg-amber-100 rounded-full h-3">
+                <div class="bg-amber-500 h-3 rounded-full" style="width: 65.6%"></div>
+              </div>
+            </div>
+
+            <!-- Bước 5: Chốt đơn thực tế -->
+            <div>
+              <div class="flex justify-between text-xs mb-1 font-semibold">
+                <span class="text-emerald-800 font-bold">5. Đơn hàng chốt thực tế ghi nhận trên Phần Mềm</span>
+                <span class="font-mono text-emerald-600 font-black">19 đơn (5,2% | 23,42 Tr đ)</span>
+              </div>
+              <div class="w-full bg-emerald-100 rounded-full h-3.5 border border-emerald-300">
+                <div class="bg-emerald-500 h-3.5 rounded-full" style="width: 5.2%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900 leading-relaxed">
+            💡 <b>Nhận xét phễu:</b> Điểm rơi rụng lớn nhất nằm ở giữa <b>Bước 2 và Bước 5</b>. Khách hỏi giá rất nhiều nhưng có đến <b>65,6%</b> khách nhận xong báo giá thì không phản hồi tiếp. Đây chính là vùng đệm có thể tăng gấp đôi doanh số nếu có kịch bản kích hoạt lại.
+          </div>
+        </div>
+
+        
+        <!-- Phân bổ sản phẩm khách hỏi nhiều nhất (Biểu đồ tròn & Chi tiết) -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-5 flex flex-col justify-between">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <div>
+              <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
+                <span>🏷️</span> Phân Bổ Sản Phẩm Khách Hỏi Nhiều Nhất
+              </h3>
+              <p class="text-xs text-slate-400 mt-0.5">Thống kê 326 lượt truy vấn sản phẩm tháng 11/2026</p>
+            </div>
+            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-[11px] font-bold rounded-lg border border-blue-200">
+              Vụ Noel & Tết
+            </span>
+          </div>
+
+          <!-- Khu vực hiển thị Biểu đồ tròn và Legend -->
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+            
+            <!-- Canvas Biểu đồ tròn -->
+            <div class="sm:col-span-6 flex flex-col items-center justify-center relative">
+              <div class="w-full max-w-[230px] aspect-square relative">
+                <canvas id="productPieChart"></canvas>
+              </div>
+              <div class="text-[11px] text-slate-400 font-medium mt-2 text-center">
+                Tổng cộng: <b class="text-slate-700 font-mono">326</b> lượt quan tâm
+              </div>
+            </div>
+
+            <!-- Danh sách tỷ lệ 7 nhóm sản phẩm chuẩn theo ảnh thực tế -->
+            <div class="sm:col-span-6 space-y-2 text-xs">
+              
+              <!-- 1. Vòng nguyệt quế -->
+              <div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full flex-shrink-0" style="background-color: #3b82f6;"></span>
+                  <span class="text-slate-700 font-semibold truncate">Vòng nguyệt quế</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-400 font-mono text-[11px]">92 ca</span>
+                  <span class="font-mono font-black text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded text-[11px]">28%</span>
+                </div>
+              </div>
+
+              <!-- 2. Khác & Đặt làm riêng -->
+              <div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full flex-shrink-0" style="background-color: #f97316;"></span>
+                  <span class="text-slate-700 font-semibold truncate">Khác & Đặt làm riêng</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-400 font-mono text-[11px]">77 ca</span>
+                  <span class="font-mono font-black text-orange-600 bg-orange-50 px-1.5 py-0.5 rounded text-[11px]">24%</span>
+                </div>
+              </div>
+
+              <!-- 3. Decal dán kính Noel / Tết -->
+              <div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full flex-shrink-0" style="background-color: #10b981;"></span>
+                  <span class="text-slate-700 font-semibold truncate">Decal dán kính Noel/Tết</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-400 font-mono text-[11px]">65 ca</span>
+                  <span class="font-mono font-black text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded text-[11px]">20%</span>
+                </div>
+              </div>
+
+              <!-- 4. Cây thông Noel -->
+              <div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full flex-shrink-0" style="background-color: #f59e0b;"></span>
+                  <span class="text-slate-700 font-semibold truncate">Cây thông Noel</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-400 font-mono text-[11px]">45 ca</span>
+                  <span class="font-mono font-black text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded text-[11px]">14%</span>
+                </div>
+              </div>
+
+              <!-- 5. Phụ kiện trang trí -->
+              <div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full flex-shrink-0" style="background-color: #8b5cf6;"></span>
+                  <span class="text-slate-700 font-semibold truncate">Phụ kiện (dây, đèn, châu)</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-400 font-mono text-[11px]">30 ca</span>
+                  <span class="font-mono font-black text-purple-600 bg-purple-50 px-1.5 py-0.5 rounded text-[11px]">9%</span>
+                </div>
+              </div>
+
+              <!-- 6. Hoa sáp / Hộp quà 20/11 -->
+              <div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full flex-shrink-0" style="background-color: #ec4899;"></span>
+                  <span class="text-slate-700 font-semibold truncate">Hoa sáp / Hộp quà 20/11</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-400 font-mono text-[11px]">11 ca</span>
+                  <span class="font-mono font-black text-pink-600 bg-pink-50 px-1.5 py-0.5 rounded text-[11px]">3%</span>
+                </div>
+              </div>
+
+              <!-- 7. Tranh treo tường & Đồng hồ -->
+              <div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-slate-50 transition border border-transparent hover:border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full flex-shrink-0" style="background-color: #06b6d4;"></span>
+                  <span class="text-slate-700 font-semibold truncate">Tranh & Đồng hồ</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-400 font-mono text-[11px]">6 ca</span>
+                  <span class="font-mono font-black text-cyan-600 bg-cyan-50 px-1.5 py-0.5 rounded text-[11px]">2%</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 flex items-center justify-between">
+            <span>🔥 <b>Sản phẩm dẫn phễu:</b> Vòng nguyệt quế & Decal dán kính chiếm gần <b>50%</b> tổng nhu cầu hội thoại.</span>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- MỤC CHI TIẾT HÀNH VI THEO DÒNG SẢN PHẨM (MỚI BỔ SUNG) -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-700 font-black flex items-center justify-center text-sm">🧠</span>
+              <h3 class="text-base md:text-lg font-black text-slate-900 uppercase tracking-tight">
+                CHI TIẾT HÀNH VI KHÁCH HÀNG THEO TỪNG DÒNG SẢN PHẨM
+              </h3>
+            </div>
+            <p class="text-xs text-slate-500 mt-1">
+              Bóc tách tâm lý mua sắm, rào cản chuyển đổi & kịch bản chốt đơn thực chiến tối ưu cho đội ngũ tư vấn Lala Shop
+            </p>
+          </div>
+          <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-lg border border-slate-200 self-start md:self-auto">
+            7 Nhóm Sản Phẩm Phân Tích
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          
+          <!-- Card 1: Vòng nguyệt quế -->
+          <div class="bg-gradient-to-b from-blue-50/50 via-white to-white border border-blue-200/80 rounded-2xl p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between border-b border-blue-100 pb-2.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">🥇</span>
+                  <div>
+                    <h4 class="font-extrabold text-blue-950 text-sm">Vòng Nguyệt Quế Noel</h4>
+                    <span class="text-[10px] text-blue-600 font-bold">Hero Product (28% Hỏi)</span>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs font-black rounded-full font-mono">92 ca</span>
+              </div>
+
+              <!-- Tâm lý & Quy cách -->
+              <div class="space-y-1.5 text-xs text-slate-600">
+                <p><b class="text-slate-800">👤 Khách hàng:</b> Mua lẻ cá nhân trang trí cửa nhà, chung cư, phòng làm việc nhỏ. Quyết định cảm tính, mua theo hình ảnh bắt mắt.</p>
+                <p><b class="text-slate-800">📏 Kích thước chuộng:</b> Đường kính 30cm, 35cm, 40cm. Phân khúc giá: <b>195k - 350k</b> (mức giá dễ chốt không cần hỏi ý kiến gia đình).</p>
+                <p><b class="text-slate-800">⚡ Nhu cầu đặc trưng:</b> Khách đòi xem ảnh thật tại shop, video cận cảnh chất liệu nơ/châu, yêu cầu giao Grab nhận ngay trong ngày.</p>
+              </div>
+
+              <!-- Điểm nghẽn rớt đơn -->
+              <div class="p-2.5 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 space-y-1">
+                <div class="font-bold flex items-center gap-1 text-[11px] text-rose-900">
+                  <span>⚠️ Rào cản rớt phễu:</span>
+                </div>
+                <p class="text-[11px] leading-relaxed">
+                  Bắt khách chuyển khoản cọc 100k - 200k dù giá chỉ 230k - 300k. Khách ngại mở app ngân hàng chuyển khoản cọc nhỏ nên hủy đơn lập tức (Ví dụ: khách <i>Thanh Thanh</i>, <i>Bánh Kem Yến Nhi</i>).
+                </p>
+              </div>
+            </div>
+
+            <!-- Kịch bản chốt đơn -->
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs">
+              <div class="text-[11px] font-bold text-emerald-700 flex items-center gap-1 mb-1">
+                <span>💡 Kịch bản tối ưu chốt sale:</span>
+              </div>
+              <p class="text-[11px] text-slate-700 bg-emerald-50/60 p-2 rounded-lg border border-emerald-100 leading-relaxed">
+                👉 <b>COD 100% không bắt cọc</b> cho các size chuẩn có sẵn. Chuẩn bị sẵn kho video ngắn 15s quay thực tế từng góc. Đề xuất tặng kèm <b>móc dán tường chịu lực</b> hoặc giảm 20k phí ship nếu chốt ngay.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Decal dán kính Noel & Tết -->
+          <div class="bg-gradient-to-b from-emerald-50/50 via-white to-white border border-emerald-200/80 rounded-2xl p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between border-b border-emerald-100 pb-2.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">🥈</span>
+                  <div>
+                    <h4 class="font-extrabold text-emerald-950 text-sm">Decal Dán Kính Noel & Tết</h4>
+                    <span class="text-[10px] text-emerald-600 font-bold">Khách Kinh Doanh (20% Hỏi)</span>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-xs font-black rounded-full font-mono">65 ca</span>
+              </div>
+
+              <!-- Tâm lý & Quy cách -->
+              <div class="space-y-1.5 text-xs text-slate-600">
+                <p><b class="text-slate-800">👤 Khách hàng:</b> Chủ tiệm nail, salon tóc, quán cafe, shop thời trang, văn phòng công ty dán mặt tiền cửa kính đón khách.</p>
+                <p><b class="text-slate-800">📏 Kích thước chuộng:</b> Kính ngang 1.8m - 3.5m. Đơn giá: <b>180k - 450k/bộ</b>. Quan tâm đặc biệt tính năng <b>in 2 mặt</b> (nhìn từ trong hay ngoài đều rõ).</p>
+                <p><b class="text-slate-800">⚡ Nhu cầu đặc trưng:</b> Khách hỏi: *"Có dễ bóc không?", "Dán có để lại keo dơ kính không?", "Có phối cảnh lên cửa trước được không?"*</p>
+              </div>
+
+              <!-- Điểm nghẽn rớt đơn -->
+              <div class="p-2.5 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 space-y-1">
+                <div class="font-bold flex items-center gap-1 text-[11px] text-rose-900">
+                  <span>⚠️ Rào cản rớt phễu:</span>
+                </div>
+                <p class="text-[11px] leading-relaxed">
+                  Nhân viên ép khách chuyển qua Zalo gửi kích thước hoặc báo giá rời rạc từng miếng nhỏ làm khách lúng túng không biết tổng thể dán lên cửa mình có đẹp và vừa hay không.
+                </p>
+              </div>
+            </div>
+
+            <!-- Kịch bản chốt đơn -->
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs">
+              <div class="text-[11px] font-bold text-emerald-700 flex items-center gap-1 mb-1">
+                <span>💡 Kịch bản tối ưu chốt sale:</span>
+              </div>
+              <p class="text-[11px] text-slate-700 bg-emerald-50/60 p-2 rounded-lg border border-emerald-100 leading-relaxed">
+                👉 Đóng gói <b>3 Combo định kích thước sẵn</b> (Combo cửa 2m, 3m, 4m). Tặng kèm <b>cây gạt dán kính chuyên dụng</b> và video hướng dẫn 3 bước dán phẳng lì không bong bóng.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Cây thông Noel -->
+          <div class="bg-gradient-to-b from-amber-50/50 via-white to-white border border-amber-200/80 rounded-2xl p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between border-b border-amber-100 pb-2.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">🥉</span>
+                  <div>
+                    <h4 class="font-extrabold text-amber-950 text-sm">Cây Thông Noel</h4>
+                    <span class="text-[10px] text-amber-600 font-bold">Giá Trị Cao (14% Hỏi)</span>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs font-black rounded-full font-mono">45 ca</span>
+              </div>
+
+              <!-- Tâm lý & Quy cách -->
+              <div class="space-y-1.5 text-xs text-slate-600">
+                <p><b class="text-slate-800">👤 Khách hàng:</b> (1) Gia đình chung cư mua cây 1.2m - 1.8m; (2) Công ty, trường mầm non, nhà hàng mua cây lớn 2.4m - 4.5m decor sảnh.</p>
+                <p><b class="text-slate-800">📏 Mức giá:</b> Đơn hàng lớn từ <b>1.200.000đ đến 5.500.000đ+</b>. Khách quan tâm độ dày xòe của nhánh lá, chất liệu thông cước hay PE phủ tuyết.</p>
+                <p><b class="text-slate-800">⚡ Nhu cầu đặc trưng:</b> Khách doanh nghiệp cần hóa đơn VAT, hợp đồng hoặc báo giá chính thức có mộc; khách sẵn sàng chuyển cọc 30-50%.</p>
+              </div>
+
+              <!-- Điểm nghẽn rớt đơn -->
+              <div class="p-2.5 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 space-y-1">
+                <div class="font-bold flex items-center gap-1 text-[11px] text-rose-900">
+                  <span>⚠️ Rào cản rớt phễu:</span>
+                </div>
+                <p class="text-[11px] leading-relaxed">
+                  Báo giá cây trần không kèm phụ kiện làm khách cảm thấy đắt đỏ và ngại phải tự đi mua thêm bóng đèn, dây kim tuyến lỉnh kỉnh; hoặc chậm xuất file báo giá PDF gửi sếp duyệt.
+                </p>
+              </div>
+            </div>
+
+            <!-- Kịch bản chốt đơn -->
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs">
+              <div class="text-[11px] font-bold text-emerald-700 flex items-center gap-1 mb-1">
+                <span>💡 Kịch bản tối ưu chốt sale:</span>
+              </div>
+              <p class="text-[11px] text-slate-700 bg-emerald-50/60 p-2 rounded-lg border border-emerald-100 leading-relaxed">
+                👉 Đóng gói <b>Full Set Trọn Gói</b> (Cây thông + Phụ kiện châu/sao/chuông + Đèn LED ấm + Hộp quà chân gốc). Xuất file PDF báo giá chỉn chu trong 10 phút để khách trình ban giám đốc.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Dây thông & Phụ kiện trang trí -->
+          <div class="bg-gradient-to-b from-purple-50/50 via-white to-white border border-purple-200/80 rounded-2xl p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between border-b border-purple-100 pb-2.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">✨</span>
+                  <div>
+                    <h4 class="font-extrabold text-purple-950 text-sm">Dây Thông & Phụ Kiện Decor</h4>
+                    <span class="text-[10px] text-purple-600 font-bold">Sức Mua Lớn (9% Hỏi)</span>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs font-black rounded-full font-mono">30 ca</span>
+              </div>
+
+              <!-- Tâm lý & Quy cách -->
+              <div class="space-y-1.5 text-xs text-slate-600">
+                <p><b class="text-slate-800">👤 Khách hàng:</b> Khách quấn lan can cầu thang, viền khung cửa, quầy lễ tân hoặc trang trí bổ sung cho cây thông cũ năm ngoái.</p>
+                <p><b class="text-slate-800">📏 Mẫu bán chạy nhất:</b> Dây thông 2.1m (loại full quả châu nơ đèn giá <b>255k - 445k</b>). Khách thường mua số lượng lớn từ <b>3 đến 6 dây/đơn</b>.</p>
+                <p><b class="text-slate-800">⚡ Sức chi tiêu:</b> Dòng sản phẩm mang lại doanh thu cực lớn (Ví dụ: khách <i>Lỳ Nguyễn</i> chốt 6 dây thu về 2,67 triệu, khách <i>Tam Do Minh</i> đặt 4 dây thu về 1,98 triệu).</p>
+              </div>
+
+              <!-- Điểm nghẽn rớt đơn -->
+              <div class="p-2.5 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 space-y-1">
+                <div class="font-bold flex items-center gap-1 text-[11px] text-rose-900">
+                  <span>⚠️ Rào cản rớt phễu:</span>
+                </div>
+                <p class="text-[11px] leading-relaxed">
+                  Báo thời gian gia công thủ công 6 - 7 ngày khiến khách cần trang trí gấp theo ngày khai trương/sự kiện từ chối ngay (Điển hình: khách <i>Hopcoi Ps</i> hỏi dây thông led từ chối vì không chờ được).
+                </p>
+              </div>
+            </div>
+
+            <!-- Kịch bản chốt đơn -->
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs">
+              <div class="text-[11px] font-bold text-emerald-700 flex items-center gap-1 mb-1">
+                <span>💡 Kịch bản tối ưu chốt sale:</span>
+              </div>
+              <p class="text-[11px] text-slate-700 bg-emerald-50/60 p-2 rounded-lg border border-emerald-100 leading-relaxed">
+                👉 Sản xuất gối đầu sẵn các mẫu dây thông 2.1m tone Đỏ - Vàng - Bạc chuẩn tại kho. Tung kịch bản <b>Mua combo từ 3 dây giảm 5% + Miễn phí vận chuyển</b>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5: Khác & Đặt làm riêng -->
+          <div class="bg-gradient-to-b from-orange-50/50 via-white to-white border border-orange-200/80 rounded-2xl p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between border-b border-orange-100 pb-2.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">🎨</span>
+                  <div>
+                    <h4 class="font-extrabold text-orange-950 text-sm">Khác & Đặt Làm Theo Yêu Cầu</h4>
+                    <span class="text-[10px] text-orange-600 font-bold">Custom/Brand (24% Hỏi)</span>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 bg-orange-100 text-orange-700 text-xs font-black rounded-full font-mono">77 ca</span>
+              </div>
+
+              <!-- Tâm lý & Quy cách -->
+              <div class="space-y-1.5 text-xs text-slate-600">
+                <p><b class="text-slate-800">👤 Khách hàng:</b> Khách gửi ảnh chụp từ Pinterest, TikTok, chuỗi F&B hoặc trường học cần trang trí concept riêng biệt.</p>
+                <p><b class="text-slate-800">📏 Nhu cầu:</b> Gắn logo thương hiệu, làm theo màu sắc nhận diện (tone hồng pastel, tone bạc băng tuyết, tone xanh lá đậm), kích thước đặc biệt.</p>
+                <p><b class="text-slate-800">⚡ Tiềm năng:</b> Đơn hàng chuỗi có giá trị rất cao nếu biết cách chốt (Ví dụ: khách <i>Tạ Soon</i> cần decor chuỗi 8 quán cafe tại TPHCM).</p>
+              </div>
+
+              <!-- Điểm nghẽn rớt đơn -->
+              <div class="p-2.5 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 space-y-1">
+                <div class="font-bold flex items-center gap-1 text-[11px] text-rose-900">
+                  <span>⚠️ Rào cản rớt phễu:</span>
+                </div>
+                <p class="text-[11px] leading-relaxed">
+                  Nhân viên trả lời cứng nhắc: *"Bên em không có mẫu này"* hoặc quăng ảnh bảo tự tìm mẫu khác, làm mất đứt các đơn hàng giá trị chục triệu của các chuỗi kinh doanh.
+                </p>
+              </div>
+            </div>
+
+            <!-- Kịch bản chốt đơn -->
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs">
+              <div class="text-[11px] font-bold text-emerald-700 flex items-center gap-1 mb-1">
+                <span>💡 Kịch bản tối ưu chốt sale:</span>
+              </div>
+              <p class="text-[11px] text-slate-700 bg-emerald-50/60 p-2 rounded-lg border border-emerald-100 leading-relaxed">
+                👉 Quy tắc: <b>Tuyệt đối không từ chối thẳng thừng</b>. Luôn phản hồi: *"Mẫu này xưởng Lala có thể làm tương tự 90% theo màu tone của quán mình, chị cho em xin kích thước để xưởng lên demo ngay nhé!"*
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6: Hoa sáp, Hộp quà & Tranh treo tường -->
+          <div class="bg-gradient-to-b from-pink-50/50 via-white to-white border border-pink-200/80 rounded-2xl p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between border-b border-pink-100 pb-2.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-xl">🎁</span>
+                  <div>
+                    <h4 class="font-extrabold text-pink-950 text-sm">Hoa Sáp 20/11 & Tranh Decor</h4>
+                    <span class="text-[10px] text-pink-600 font-bold">Quà Tặng & Nội Thất (5% Hỏi)</span>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 bg-pink-100 text-pink-700 text-xs font-black rounded-full font-mono">17 ca</span>
+              </div>
+
+              <!-- Tâm lý & Quy cách -->
+              <div class="space-y-1.5 text-xs text-slate-600">
+                <p><b class="text-slate-800">👤 Khách hàng:</b> Phụ huynh, học sinh tri ân thầy cô giáo ngày 20/11 (dồn vào ngày 17-20/11); khách mua tranh tráng gương tân gia cuối năm.</p>
+                <p><b class="text-slate-800">📏 Mức giá:</b> Set hoa quà <b>150k - 450k</b>; tranh treo tường <b>600k - 1.800k</b>. Cần kèm thiệp viết lời chúc và đóng gói hộp nơ trang trọng.</p>
+                <p><b class="text-slate-800">⚡ Nhu cầu đặc trưng:</b> Khách hỏi giao gấp trước giờ diễn ra lễ kỷ niệm tại trường, yêu cầu đóng gói cẩn thận tránh móp méo hộp hoa.</p>
+              </div>
+
+              <!-- Điểm nghẽn rớt đơn -->
+              <div class="p-2.5 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 space-y-1">
+                <div class="font-bold flex items-center gap-1 text-[11px] text-rose-900">
+                  <span>⚠️ Rào cản rớt phễu:</span>
+                </div>
+                <p class="text-[11px] leading-relaxed">
+                  Hết ngày 20/11 nhu cầu hoa sáp lập tức nguội hẳn. Nếu không kịp thời điều hướng phễu khách này sang mua đồ trang trí Noel/Tết thì sẽ lãng phí tệp data khách cũ.
+                </p>
+              </div>
+            </div>
+
+            <!-- Kịch bản chốt đơn -->
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs">
+              <div class="text-[11px] font-bold text-emerald-700 flex items-center gap-1 mb-1">
+                <span>💡 Kịch bản tối ưu chốt sale:</span>
+              </div>
+              <p class="text-[11px] text-slate-700 bg-emerald-50/60 p-2 rounded-lg border border-emerald-100 leading-relaxed">
+                👉 Tái khai thác dữ liệu: Gửi tin nhắn tri ân khách từng mua hoa 20/11 tặng <b>Voucher giảm 15% khi mua đồ Noel & Decal Tết</b>. Đây là tệp khách hàng có lòng tin và tỷ lệ mua lại rất cao.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- 4 ĐIỂM NGHẼN CỐT LÕI (ROOT CAUSE ANALYSIS) -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+        <div class="flex items-center gap-2 pb-3 border-b border-slate-100">
+          <span class="w-8 h-8 rounded-full bg-rose-100 text-rose-700 font-black flex items-center justify-center text-sm">⚠️</span>
+          <div>
+            <h3 class="text-base font-extrabold text-slate-900">4 ĐIỂM NGHẼN LỚN NHẤT KHIẾN TỶ LỆ CHỐT BỊ KÌM HÃM</h3>
+            <span class="text-xs text-slate-400">Bóc tách từ 10 ca huỷ đơn chính thức và 240 ca im lặng sau khi nhận giá</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- Điểm nghẽn 1 -->
+          <div class="p-4 bg-rose-50/60 border border-rose-200 rounded-xl space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-extrabold text-rose-900 text-sm">1. Rào Cản Bắt Cọc Đơn Nhỏ (< 300k - 350k)</span>
+              <span class="px-2 py-0.5 bg-rose-200 text-rose-800 font-bold rounded text-[10px]">GÂY MẤT KHÁCH NHIỀU NHẤT</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Nhân viên áp dụng quy định bắt cọc 100k - 200k đối với các mẫu làm thủ công ngay cả với đơn giá trị nhỏ (220k - 350k). Khách mua online cảm thấy phiền hà khi phải mở app ngân hàng chuyển khoản cọc một số tiền nhỏ, dẫn đến quyết định huỷ đơn ngay.
+            </p>
+            <div class="p-2.5 bg-white/80 rounded-lg border border-rose-200 text-[11px] text-slate-600">
+              📌 <b>Bằng chứng thực tế:</b> Khách <i>Huong Tran Thanh</i> (đơn 355k cọc 200k ➔ huỷ), Khách <i>Thanh Thanh</i> (vòng 235k cọc 100k ➔ huỷ), Khách <i>Banh Kem Yến Nhi</i> (230k cọc 100k ➔ huỷ).
+            </div>
+          </div>
+
+          <!-- Điểm nghẽn 2 -->
+          <div class="p-4 bg-amber-50/60 border border-amber-200 rounded-xl space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-extrabold text-amber-900 text-sm">2. Ép Chuyển Hướng Qua Zalo Khi Khách Đang Nóng</span>
+              <span class="px-2 py-0.5 bg-amber-200 text-amber-800 font-bold rounded text-[10px]">ĐỨT GÃY PHỄU</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Khi khách hàng hỏi kích thước hoặc cần giao Grab gấp trong ngày, câu trả lời tự động hoặc thói quen của sale là gửi số điện thoại mời kết bạn Zalo. Khách hàng lười đổi ứng dụng, cảm xúc mua sắm tức thời bị nguội lạnh hoặc khách qua Zalo không được tiếp nhận ngay.
+            </p>
+            <div class="p-2.5 bg-white/80 rounded-lg border border-amber-200 text-[11px] text-slate-600">
+              📌 <b>Bằng chứng thực tế:</b> Khách <i>Lê Tánh</i> (0937095039) hỏi nhiều mẫu Noel, nhân viên bảo qua Zalo nhưng chậm trả lời khiến khách bức xúc dọa mua shop khác; Khách <i>Hoàng Mỹ</i> (0376654899) phàn nàn muốn mua sỉ nhưng nhắn Zalo không ai trả lời.
+            </div>
+          </div>
+
+          <!-- Điểm nghẽn 3 -->
+          <div class="p-4 bg-blue-50/60 border border-blue-200 rounded-xl space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-extrabold text-blue-900 text-sm">3. Báo Giá Thụ Động - Không Có Call-To-Action</span>
+              <span class="px-2 py-0.5 bg-blue-200 text-blue-800 font-bold rounded text-[10px]">240 KHÁCH IM LẶNG</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Mạch chat của sale chỉ đơn thuần trả lời con số: *"Dạ mẫu này 255k chị ạ"* hoặc quăng 1 loạt 10 hình ảnh mẫu mà không kèm câu hỏi mở (Ví dụ: *"Chị treo cửa nhà hay cửa kính văn phòng để em chọn size vừa vặn nhất ạ?"*) hoặc không tạo sự khan hiếm (sắp hết mẫu/chỉ còn 3 suất freeship).
+            </p>
+            <div class="p-2.5 bg-white/80 rounded-lg border border-blue-200 text-[11px] text-slate-600">
+              📌 <b>Hậu quả:</b> Khách "Seen" giá xong rồi im lặng vì không có lý do để tiếp tục cuộc trò chuyện.
+            </div>
+          </div>
+
+          <!-- Điểm nghẽn 4 -->
+          <div class="p-4 bg-purple-50/60 border border-purple-200 rounded-xl space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-extrabold text-purple-900 text-sm">4. Thời Gian Chuẩn Bị Thủ Công Dài (6 - 7 Ngày)</span>
+              <span class="px-2 py-0.5 bg-purple-200 text-purple-800 font-bold rounded text-[10px]">MẤT KHÁCH CẦN GẤP</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              Đồ decor Giáng sinh khách thường phát sinh nhu cầu trang trí cận ngày hoặc theo sự kiện. Nhân viên thông báo thời gian làm 6-7 ngày khiến khách từ chối mà sale không chủ động giới thiệu các mẫu **ĐÃ CÓ SẴN TRONG KHO** để giao ngay trong 24h.
+            </p>
+            <div class="p-2.5 bg-white/80 rounded-lg border border-purple-200 text-[11px] text-slate-600">
+              📌 <b>Bằng chứng thực tế:</b> Khách <i>Hopcoi Ps</i> hỏi mua dây thông trang trí có đèn led, khi biết giao hàng mất 6-7 ngày đã từ chối mua vì cần gấp.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOP ĐƠN HÀNG GIÁ TRỊ CAO & CÁC CA RƠI RỤNG ĐIỂN HÌNH -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Bảng đơn giá trị cao -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <h3 class="text-base font-bold text-emerald-800 flex items-center gap-2">
+              <span>🏆</span> Top Đơn Hàng Giá Trị Cao Nhất Chốt Qua Chat Fanpage
+            </h3>
+            <span class="text-xs text-slate-400">Minh chứng tệp khách VIP</span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-50 text-slate-600 uppercase text-[10px] border-b border-slate-200">
+                <tr>
+                  <th class="p-2.5">Khách Hàng</th>
+                  <th class="p-2.5 text-right">Giá Trị</th>
+                  <th class="p-2.5">Sản Phẩm & Chi Tiết Chốt</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">Tam Do Minh<br><span class="text-[10px] text-slate-400">0905 728 297</span></td>
+                  <td class="p-2.5 text-right font-mono font-black text-emerald-600">3.955.000 đ</td>
+                  <td class="p-2.5 text-slate-600">Chốt đợt 1 (1,97M cọc) + Đặt thêm 4 dây trang trí Noel (1,98M).</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">Lỳ Nguyễn<br><span class="text-[10px] text-slate-400">0865 659 539</span></td>
+                  <td class="p-2.5 text-right font-mono font-black text-emerald-600">2.670.000 đ</td>
+                  <td class="p-2.5 text-slate-600">Chốt mua 6 dây thông Noel (loại 2m1 full phụ kiện 445k/dây), cọc 1,17M.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">Tran Thi Huong Mai</td>
+                  <td class="p-2.5 text-right font-mono font-bold text-emerald-600">1.580.000 đ</td>
+                  <td class="p-2.5 text-slate-600">Đặt mua decal trang trí Tết qua website, chuyển khoản thanh toán 100%.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">Ha Nguyen<br><span class="text-[10px] text-slate-400">0832 121 509</span></td>
+                  <td class="p-2.5 text-right font-mono font-bold text-emerald-600">1.050.000 đ</td>
+                  <td class="p-2.5 text-slate-600">Chốt mua 2 set quà Noel, cung cấp địa chỉ và chuyển khoản cọc 150k.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">Thanh Dang<br><span class="text-[10px] text-slate-400">0966 467 470</span></td>
+                  <td class="p-2.5 text-right font-mono font-bold text-slate-800">790.000 đ</td>
+                  <td class="p-2.5 text-slate-600">Đặt 2 vòng nguyệt quế trang trí Noel, cọc 200k.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Bảng các ca hủy đơn rút kinh nghiệm -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <h3 class="text-base font-bold text-rose-800 flex items-center gap-2">
+              <span>🛑</span> Các Ca Huỷ Đơn & Rơi Rụng Cần Rút Kinh Nghiệm
+            </h3>
+            <span class="text-xs text-rose-500 font-bold">10 ca dropped</span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-rose-50 text-rose-800 uppercase text-[10px] border-b border-rose-200">
+                <tr>
+                  <th class="p-2.5">Khách Hàng</th>
+                  <th class="p-2.5">Sản Phẩm & Giá</th>
+                  <th class="p-2.5">Lý Do Huỷ Đơn</th>
+                  <th class="p-2.5">Khắc Phục Lẽ Ra Nên Làm</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">Huong Tran Thanh<br><span class="text-[10px] text-slate-400">0912 323 627</span></td>
+                  <td class="p-2.5 font-mono text-slate-800">Decor lớp học (355k)</td>
+                  <td class="p-2.5 text-rose-600 font-semibold">Bắt cọc 200k</td>
+                  <td class="p-2.5 text-slate-600">Cho COD 100% hoặc cọc nhẹ 50k.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">Hopcoi Ps</td>
+                  <td class="p-2.5 font-mono text-slate-800">Dây thông LED</td>
+                  <td class="p-2.5 text-rose-600 font-semibold">Giao 6-7 ngày quá lâu</td>
+                  <td class="p-2.5 text-slate-600">Gợi ý mẫu tương đương sẵn kho giao 24h.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">Thanh Thanh</td>
+                  <td class="p-2.5 font-mono text-slate-800">Vòng nguyệt quế (235k)</td>
+                  <td class="p-2.5 text-rose-600 font-semibold">Bắt cọc 100k</td>
+                  <td class="p-2.5 text-slate-600">Cho giao COD vì hàng mẫu chuẩn shop.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-2.5 font-bold text-slate-900">Tạ Soon (Chuỗi quán)</td>
+                  <td class="p-2.5 font-mono text-slate-800">Decor 8 quán TPHCM</td>
+                  <td class="p-2.5 text-rose-600 font-semibold">Từ chối thẳng thừng</td>
+                  <td class="p-2.5 text-slate-600">Khéo léo xin mẫu để tuỳ biến từ hàng có sẵn.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CHIẾN LƯỢC HÀNH ĐỘNG: GIẢI PHÓNG 240 KHÁCH HÀNG TỒN ĐỌNG (MỎ VÀNG) -->
+      <div class="bg-gradient-to-r from-emerald-900 to-teal-900 text-white rounded-2xl p-6 shadow-md space-y-4">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-emerald-700/60 pb-3">
+          <div>
+            <h3 class="text-lg font-extrabold flex items-center gap-2">
+              <span>🚀</span> KẾ HOẠCH HÀNH ĐỘNG: KÍCH HOẠT LẠI 240 KHÁCH HÀNG ĐANG CÂN NHẮC
+            </h3>
+            <p class="text-xs text-emerald-200 mt-0.5">Mục tiêu: Đạt thêm 10% chuyển đổi ➔ Thu về thêm <b>15 - 18 triệu doanh thu</b> mà không tốn thêm 1 đồng chi phí Ads.</p>
+          </div>
+          <span class="px-3 py-1 bg-emerald-500 text-white text-xs font-black rounded-full shadow-sm">
+            TIỀM NĂNG: +24 ĐƠN HÀNG MỚI
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <!-- Bước 1 -->
+          <div class="p-4 bg-emerald-800/40 border border-emerald-600/40 rounded-xl space-y-2">
+            <div class="font-extrabold text-emerald-300 text-sm">Bước 1: Chiến Dịch Follow-Up Trong 24h</div>
+            <p class="text-emerald-100/90 leading-relaxed">
+              Nhân viên lọc danh sách 240 khách đã hỏi giá trong tháng 11, gửi kịch bản CSKH giữ chân tặng mã <b>FREESHIP</b> hoặc tặng <b>1 dây đèn LED đom đóm</b> cho khách chốt đơn trong ngày.
+            </p>
+          </div>
+
+          <!-- Bước 2 -->
+          <div class="p-4 bg-emerald-800/40 border border-emerald-600/40 rounded-xl space-y-2">
+            <div class="font-extrabold text-emerald-300 text-sm">Bước 2: Nới Lỏng Chính Sách Cọc</div>
+            <p class="text-emerald-100/90 leading-relaxed">
+              Áp dụng chính sách <b>GIAO COD 100%</b> cho tất cả các đơn hàng dưới 300.000 VNĐ. Nếu khách lo lắng về chất lượng, gửi kèm video quay thực tế tại xưởng Lala để tạo niềm tin tuyệt đối.
+            </p>
+          </div>
+
+          <!-- Bước 3 -->
+          <div class="p-4 bg-emerald-800/40 border border-emerald-600/40 rounded-xl space-y-2">
+            <div class="font-extrabold text-emerald-300 text-sm">Bước 3: Chốt Đơn Ngay Tại Messenger</div>
+            <p class="text-emerald-100/90 leading-relaxed">
+              Tuyệt đối không ép khách kết bạn Zalo. Xin số điện thoại và địa chỉ giao hàng ngay trong khung chat Facebook, tạo đơn trên phần mềm và gửi link xác nhận đơn hàng chuyên nghiệp.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mẫu tin nhắn Re-targeting mẫu -->
+        <div class="p-4 bg-black/30 border border-emerald-500/30 rounded-xl text-xs space-y-2">
+          <div class="font-bold text-emerald-300 flex items-center justify-between">
+            <span>💬 Mẫu Tin Nhắn Kích Hoạt Lại Gửi Tới 240 Khách Đang Cân Nhắc:</span>
+            <span class="text-[10px] text-emerald-400">Copy dùng ngay</span>
+          </div>
+          <div class="p-3 bg-white text-slate-800 rounded-lg font-mono text-[11px] leading-relaxed select-all">
+            "Dạ Lala Shop chào chị [Tên khách] ạ! Mẫu [Vòng nguyệt quế / Decal Noel] hôm trước chị hỏi hiện xưởng Lala vừa hoàn thiện thêm một đợt hàng có sẵn siêu xinh. Chuẩn bị bước vào đợt cao điểm Giáng sinh, hôm nay Lala xin phép dành tặng riêng chị ưu đãi <b>MIỄN PHÍ VẬN CHUYỂN</b> (hoặc tặng kèm 1 dây đèn LED đom đóm trang trí). Chị có muốn em giữ lại 1 set giao về cho mình kịp trang trí không ạ?"
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="text-center text-xs text-slate-400 pt-6 border-t border-slate-200">
+      Lala Shop Management Dashboard | Báo cáo tích hợp tự động bởi Antigravity AI (25/11/2026)
+    </footer>
+  </div>
+<script>
+
+    // Khởi tạo Biểu đồ tròn Phân bổ sản phẩm Fanpage
+    let productPieChartInstance = null;
+    function initProductPieChart() {
+      const ctx = document.getElementById('productPieChart');
+      if (!ctx) return;
+      if (productPieChartInstance) {
+        productPieChartInstance.resize();
+        return;
+      }
+      productPieChartInstance = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: [
+            'Vòng nguyệt quế (28%)',
+            'Decal dán kính Noel / Tết (20%)',
+            'Cây thông Noel (14%)',
+            'Phụ kiện (dây thông, đèn, châu) (9%)',
+            'Hoa sáp / Hộp quà 20/11 (3%)',
+            'Tranh & Đồng hồ (2%)',
+            'Khác & Đặt làm riêng (24%)'
+          ],
+          datasets: [{
+            data: [28, 20, 14, 9, 3, 2, 24],
+            backgroundColor: [
+              '#3b82f6', // Vòng nguyệt quế
+              '#10b981', // Decal
+              '#f59e0b', // Cây thông
+              '#8b5cf6', // Phụ kiện
+              '#ec4899', // Hoa sáp 20/11
+              '#06b6d4', // Tranh & Đồng hồ
+              '#f97316'  // Khác & Đặt làm riêng
+            ],
+            borderColor: '#ffffff',
+            borderWidth: 2,
+            hoverOffset: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false // Đã có bảng legend chi tiết bên cạnh
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const counts = [92, 65, 45, 30, 11, 6, 77];
+                  const label = context.label || '';
+                  const value = context.raw || 0;
+                  const count = counts[context.dataIndex] || 0;
+                  return ` ${label}: ${count} lượt hỏi (${value}%)`;
+                }
+              }
+            }
+          },
+          cutout: '58%'
+        }
+      });
+    }
+
+    // Đảm bảo load chart sau khi DOM sẵn sàng
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initProductPieChart);
+    } else {
+      setTimeout(initProductPieChart, 150);
+    }
+
+</script>
+</body>
+</html>
